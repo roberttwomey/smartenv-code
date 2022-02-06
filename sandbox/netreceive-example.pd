@@ -1,0 +1,41 @@
+#N canvas 720 0 720 878 10;
+#X obj 31 78 sel 1 2 3 4;
+#X obj 31 137 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 46 153 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 62 168 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 78 184 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 94 199 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 31 30 netreceive 3000 1;
+#X msg 220 70 connect 127.0.0.1 3000;
+#X obj 240 210 netsend 1;
+#X msg 250 100 send 1;
+#X msg 300 110 send 2;
+#X msg 330 130 send 3;
+#X msg 360 160 send 4;
+#X msg 360 200 send -1;
+#X msg 220 30 connect 192.168.7.255 3000;
+#X msg 170 165 disconnect;
+#X obj 110 60 print;
+#X obj 240 250 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 3 0;
+#X connect 0 3 4 0;
+#X connect 0 4 5 0;
+#X connect 6 0 0 0;
+#X connect 6 0 16 0;
+#X connect 7 0 8 0;
+#X connect 8 0 17 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 11 0 8 0;
+#X connect 12 0 8 0;
+#X connect 13 0 8 0;
+#X connect 14 0 8 0;
+#X connect 15 0 8 0;
