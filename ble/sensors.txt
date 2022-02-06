@@ -1,0 +1,15 @@
+#cema
+ac:23:3f:ab:e7:49 chair
+# home
+
+# clarke center
+ac:23:3f:a2:2b:0d desk
+ac:23:3f:a2:2b:0e unknown
+ac:23:3f:a2:2b:0f unknown
+ac:23:3f:a2:2b:10 mug
+ac:23:3f:a2:2b:11 unknown
+ac:23:3f:a2:2b:12 unknown
+ac:23:3f:a2:2b:13 chair
+ac:23:3f:a2:2b:15 laptop
+ac:23:3f:a2:2b:16 unknown
+ac:23:3f:a2:2b:31 door
