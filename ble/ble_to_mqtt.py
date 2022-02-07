@@ -23,8 +23,10 @@ valid_s4_addr = [
 
 clientName = "smartenv"
 broker_addr= "public.cloud.shiftr.io"
-broker_port = 443
+broker_port = 443 # ignored, https not working right now
 topic = "smartenv/"
+mqtt_user = "public"
+mqtt_password = "public"
 
 # MQTT functions
 def on_publish(client,userdata,result):
@@ -33,7 +35,8 @@ def on_publish(client,userdata,result):
 
 client1= paho.Client(clientName)
 client1.on_publish = on_publish
-client1.connect(broker_addr,broker_port)
+client1.username_pw_set(mqtt_user, password=mqtt_password)
+client1.connect(broker_addr)
 
 # BLE functions
 def toDecimal(word):
