@@ -5,15 +5,18 @@ from time import gmtime, strftime, sleep, time
 from bluepy.btle import Scanner, DefaultDelegate, BTLEException
 import sys
 
-valid_addr = [
+valid_e8_addr = [
 				"ac:23:3f:a2:2b:16",
 				"ac:23:3f:a2:2b:0e",
 				"ac:23:3f:a2:2b:0f",
 				"ac:23:3f:a2:2b:11",
 				"ac:23:3f:a2:2b:12",
-				"ac:23:3f:ab:e7:49"
+				"ac:23:3f:ab:e7:49", # new E8s
 				]
 
+valid_s4_addr = [
+				"ac:23:3f:aa:77:d2" # S4 door sensor
+]
 
 # function toDecimal(word) {
 #   var integer = parseInt(word.substr(0,2),16);
@@ -51,11 +54,43 @@ def parse_accel(data, addr):
 
 	return None
 
+def parse_door(data, addr):
+	addr_reversed = "".join(addr.split(":")[::-1])
+
+	# check that we are getting a minew E-8 acceleration broadcast
+
+	# example 3906a40164000101ffd277aa3f23ac3c52
+
+	# if data.startswith('e1ff') and data.endsiwth(addr_reversed):
+	if data.startswith('3906') and len(data)==34:
+		# print(data, addr_reversed)
+		uuid = data[2:4]+data[0:2]
+		frameType = data[4:6]
+		productModel = data[6:8]
+		batteryLevel = int(data[8:10], 16)
+
+		# door, button, and changed are all in data[10:16]
+		door_state = int(data[11])
+		button_state = int(data[13])
+		state_changed = int(data[15])
+
+		# address is data[18:30], in reversed pairs
+		addr = "".join([data[18+i:18+i+2] for i in range(0, len(data[18:30]), 2)][::-1])
+	
+		tail = data[30:]
+	
+		# print(uuid, frameType, productModel, batteryLevel, door_state, button_state, state_changed, data[12:18], addr, tail)
+		return (addr, door_state, button_state, state_changed, batteryLevel)
+
+	return None
+
 class ScanDelegate(DefaultDelegate):
 
 	def handleDiscovery(self, dev, isNewDev, isNewData):
 		# filtering by address
-		if dev.addr in valid_addr:
+
+		# sensor tags
+		if dev.addr in valid_e8_addr:
 			# print(strftime("%Y-%m-%d %H:%M:%S", gmtime()), dev.addr, dev.getScanData())
 			for (adtype, desc, value) in dev.getScanData():
 				# print("  %s = %s" % (desc, value))
@@ -63,7 +98,20 @@ class ScanDelegate(DefaultDelegate):
 				accel_data = parse_accel(value, dev.addr)
 				if accel_data is not None:
 					# addr, accel_x, accel_y, accel_z, battery = accel_data
-					print("%s:\t%f\t%f\t%f\t%f" % accel_data)
+					print("%s:\t%f\t%f\t%f\t%f\ttag" % accel_data)
+				sys.stdout.flush()
+
+		# door sensor
+		if dev.addr in valid_s4_addr:
+			# print(strftime("%Y-%m-%d %H:%M:%S", gmtime()), dev.addr, dev.getScanData())
+			for (adtype, desc, value) in dev.getScanData():
+				# print("  %s = %s" % (desc, value))
+
+				# print(value)
+				door_data = parse_door(value, dev.addr)
+				if door_data is not None:
+					addr, door_state, button_state, state_changed, batteryLevel = door_data
+					print("%s:\t%d\t%d\t%d\t%f\tdoor" % door_data)
 				sys.stdout.flush()
 
 		# no filtering
@@ -84,8 +132,11 @@ def main():
 			# do nothing
 			# if(time()-lasttime > 1.0):
 			scanner.scan(10.0, passive=True)
-			print(".", end=" ")
-			sys.stdout.flush()
+
+			# add thinking dot
+			# print(".", end=" ")
+			# sys.stdout.flush()
+
 				# lasttime =time()
 	except KeyboardInterrupt:
 		scanner.stop()
