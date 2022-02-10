@@ -58,7 +58,7 @@ sudo systemctl stop blescanner.service
 
 ## Stream to MQTT Broker
 
-Instead of `blescanner.py` above, use `ble_to_mqtt.py`.
+Instead of `blescanner.py` above, use `ble_to_mqtt.py`. This will publish the sensor tag readings to the public.shifter.io MQTT broker with the topic `/smartenv/tag/` or `/smartenv/door`.
 
 ## Info
 See [this page](https://reelyactive.github.io/advlib/), and select __Minew I7 (Accelerometer)__, to see how the acceleration is packed into the advertising packet.
