@@ -4,12 +4,16 @@ Bluetooth Low Energy interface for minew E-8 beacons for Smart Environments Clas
 ## Setup
 Runs on raspberry pi. Testing on raspberry pi 4. 
 
-Install [bluepy](https://github.com/IanHarvey/bluepy) and sqlite.
+Install [bluepy](https://github.com/IanHarvey/bluepy). <!--and sqlite-->
 
-```
+<!--```
 sudo apt-get install python3-pip libglib2.0-dev
 sudo pip3 install bluepy
 sudo apt-get install sqlite
+```-->
+```
+sudo apt-get install python3-pip libglib2.0-dev
+sudo pip3 install bluepy
 ```
 
 ### Beacon Configuration
