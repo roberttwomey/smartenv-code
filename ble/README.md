@@ -1,5 +1,5 @@
 # housemachine-ble
-Bluetooth Low Energy interface for minew E-8 beacons for Smart Environments Class.
+Bluetooth Low Energy interface for minew E-8 beacons for Smart Environments class [smartenv.roberttwomey.com](https://smartenv.roberttwomey.com).
 
 ## Setup
 Runs on raspberry pi. Testing on raspberry pi 4. 
