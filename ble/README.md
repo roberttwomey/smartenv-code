@@ -1,5 +1,5 @@
 # housemachine-ble
-Bluetooth Low Energy interface for minew E-8 beacons for housemachine project
+Bluetooth Low Energy interface for minew E-8 beacons for Smart Environments Class.
 
 ## Setup
 Runs on raspberry pi. Testing on raspberry pi 4. 
@@ -32,7 +32,7 @@ After=syslog.target network.target
 
 [Service]
 Type=forking
-ExecStart=/home/pi/housemachine-ble/textlog/launch_blescanner.sh
+ExecStart=/home/pi/smartenv-code/launch_blescanner.sh
 
 [Install]
 WantedBy=multi-user.target
@@ -56,10 +56,14 @@ sudo systemctl start blescanner.service
 sudo systemctl stop blescanner.service
 ```
 
+## Stream to MQTT Broker
+
+Instead of `blescanner.py` above, use `ble_to_mqtt.py`.
+
 ## Info
 See [this page](https://reelyactive.github.io/advlib/), and select __Minew I7 (Accelerometer)__, to see how the acceleration is packed into the advertising packet.
 
-__E8 and i7 Accelerometer Beacon__
+__E8 and I7 Accelerometer Beacon__
 
 | Byte(s) | Hex String   | Description                         |
 |--------:|:-------------|:------------------------------------|
