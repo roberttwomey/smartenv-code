@@ -1,4 +1,4 @@
-# housemachine-ble
+# BLE Sensor Tags
 Bluetooth Low Energy interface for minew E-8 beacons for Smart Environments class [smartenv.roberttwomey.com](https://smartenv.roberttwomey.com).
 
 ## Setup
