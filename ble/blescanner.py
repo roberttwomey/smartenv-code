@@ -12,6 +12,20 @@ valid_e8_addr = [
 				"ac:23:3f:a2:2b:11",
 				"ac:23:3f:a2:2b:12",
 				"ac:23:3f:ab:e7:49", # new E8s
+				"ac:23:3f:ab:e7:42", # new E8s
+				"ac:23:3f:ab:e7:46", # new E8s
+				"ac:23:3f:ab:e7:43", # new E8s
+				"ac:23:3f:ab:e7:40", # new E8s
+				"ac:23:3f:ab:e7:47", # new E8s
+				"ac:23:3f:ab:e7:65", # new E8s
+				"ac:23:3f:ab:e7:66", # new E8s
+				"ac:23:3f:ab:e7:63", # new E8s
+				"ac:23:3f:ab:e7:60", # new E8s
+				"ac:23:3f:ab:e7:67", # new E8s
+				"ac:23:3f:ab:e7:64", # new E8s
+				"ac:23:3f:ab:e7:5f", # new E8s
+				"ac:23:3f:ab:e7:62", # new E8s
+				"ac:23:3f:ab:e7:5e", # new E8s
 				]
 
 valid_s4_addr = [

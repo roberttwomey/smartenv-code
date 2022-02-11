@@ -1,8 +1,14 @@
 #!/usr/bin/python
+'''
+    simple BLE MQTT IoT gateway
+    - BLE scanner to grab data from advertising packets
+    - MQTT publish messages from rpi to shiftr public cloud
+    
+    view the shiftr public cloud here: https://www.shiftr.io/try/
 
-# gist example
-# https://gist.github.com/tomconte/eef8c9bfb4434787672c303153eee500
+    rtwomey@unl.edu | smartenv.roberttwomey.com | 2022
 
+'''
 from time import gmtime, strftime, sleep, time
 from bluepy.btle import Scanner, DefaultDelegate, BTLEException
 import paho.mqtt.client as paho
@@ -15,14 +21,29 @@ valid_e8_addr = [
 				"ac:23:3f:a2:2b:11",
 				"ac:23:3f:a2:2b:12",
 				"ac:23:3f:ab:e7:49", # new E8s
-				]
+				"ac:23:3f:ab:e7:42", # new E8s
+				"ac:23:3f:ab:e7:46", # new E8s
+				"ac:23:3f:ab:e7:43", # new E8s
+				"ac:23:3f:ab:e7:40", # new E8s
+				"ac:23:3f:ab:e7:47", # new E8s
+				"ac:23:3f:ab:e7:65", # new E8s
+				"ac:23:3f:ab:e7:66", # new E8s
+				"ac:23:3f:ab:e7:63", # new E8s
+				"ac:23:3f:ab:e7:60", # new E8s
+				"ac:23:3f:ab:e7:67", # new E8s
+				"ac:23:3f:ab:e7:64", # new E8s
+				"ac:23:3f:ab:e7:5f", # new E8s
+				"ac:23:3f:ab:e7:62", # new E8s
+				"ac:23:3f:ab:e7:5e", # new E8s
+			]
 
 valid_s4_addr = [
 				"ac:23:3f:aa:77:d2" # S4 door sensor
 ]
 
 clientName = "smartenv"
-broker_addr= "public.cloud.shiftr.io"
+#broker_addr= "public.cloud.shiftr.io"
+broker_addr= "34.77.13.55"
 broker_port = 443 # ignored, https not working right now
 topic = "smartenv/"
 mqtt_user = "public"
@@ -30,13 +51,21 @@ mqtt_password = "public"
 
 # MQTT functions
 def on_publish(client,userdata,result):
-    print("published: "+userdata)
+    print("published: "+str(userdata))
     pass
 
+def on_connect():
+	print("connected...")
+	pass
+
+
 client1= paho.Client(clientName)
-client1.on_publish = on_publish
+client1.on_connect = on_connect
+# client1.on_publish = on_publish # doesn't seem to work
 client1.username_pw_set(mqtt_user, password=mqtt_password)
+print("connecting...", end="")
 client1.connect(broker_addr)
+print("done.")
 
 # BLE functions
 def toDecimal(word):
@@ -46,7 +75,7 @@ def toDecimal(word):
 		return (integer-256)+decimal
 	return integer+decimal
 
-def parse_accel(data, addr):
+def parse_tag(data, addr):
 	addr_reversed = "".join(addr.split(":")[::-1])
 
 	# check that we are getting a minew E-8 acceleration broadcast
@@ -88,9 +117,10 @@ def parse_door(data, addr):
 		# address is data[18:30], in reversed pairs
 		addr = "".join([data[18+i:18+i+2] for i in range(0, len(data[18:30]), 2)][::-1])
 	
-		tail = data[30:]
-	
+		# debug
+		# tail = data[30:]
 		# print(uuid, frameType, productModel, batteryLevel, door_state, button_state, state_changed, data[12:18], addr, tail)
+		
 		return (addr, door_state, button_state, state_changed, batteryLevel)
 
 	return None
@@ -106,13 +136,15 @@ class ScanDelegate(DefaultDelegate):
 			for (adtype, desc, value) in dev.getScanData():
 				# print("  %s = %s" % (desc, value))
 				# print(value)
-				accel_data = parse_accel(value, dev.addr)
-				if accel_data is not None:
+				tag_data = parse_tag(value, dev.addr)
+				if tag_data is not None:
 					# addr, accel_x, accel_y, accel_z, battery = accel_data
-					print("%s:\t%f\t%f\t%f\t%f\ttag" % accel_data)
+					print("%s: %f, %f, %f, %f (tag)" % tag_data)
 
 					# publish to mqtt
-					ret = client1.publish("smartenv/"+accel_data[0]," ".join(str(x) for x in accel_data[1:]))
+					msg = " ".join(str(x) for x in tag_data[1:])
+					# print(msg)
+					ret = client1.publish("smartenv/tag",msg)
 
 				sys.stdout.flush()
 
@@ -126,10 +158,12 @@ class ScanDelegate(DefaultDelegate):
 				door_data = parse_door(value, dev.addr)
 				if door_data is not None:
 					addr, door_state, button_state, state_changed, batteryLevel = door_data
-					print("%s:\t%d\t%d\t%d\t%f\tdoor" % door_data)
+					print("%s: %d, %d, %d, %f (door)" % door_data)
 
 					# publish to mqtt
-					ret= client1.publish("smartenv/"+door_data[0]," ".join(str(x) for x in door_data[1:]))
+					msg = " ".join(str(x) for x in door_data[1:])
+					# print(msg)
+					ret = client1.publish("smartenv/door", msg)
 
 				sys.stdout.flush()
 
@@ -156,7 +190,7 @@ def main():
 			# print(".", end=" ")
 			# sys.stdout.flush()
 
-				# lasttime =time()
+			# lasttime =time()
 	except KeyboardInterrupt:
 		scanner.stop()
 	print("exiting...")
@@ -164,5 +198,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
