@@ -16,6 +16,12 @@ sudo apt-get install python3-pip libglib2.0-dev
 sudo pip3 install bluepy
 ```
 
+Install screen (lets us run the service in a headless mode, but reconnect later)
+
+```
+sudo apt-get install screen
+```
+
 ### Beacon Configuration
 Disable unnecessary beacon slots (for instance iBeacon), according to this guide: [https://reelyactive.github.io/diy/minew-e8-config/](https://reelyactive.github.io/diy/minew-e8-config/)
 
