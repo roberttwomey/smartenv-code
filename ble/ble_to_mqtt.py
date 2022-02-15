@@ -28,6 +28,7 @@ valid_e8_addr = [
 				"ac:23:3f:ab:e7:43", # new E8s
 				"ac:23:3f:ab:e7:40", # new E8s
 				"ac:23:3f:ab:e7:47", # new E8s
+				"ac:23:3f:ab:e7:49", # new E8s
 				"ac:23:3f:ab:e7:65", # new E8s
 				"ac:23:3f:ab:e7:66", # new E8s
 				"ac:23:3f:ab:e7:63", # new E8s
