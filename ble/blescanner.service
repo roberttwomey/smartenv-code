@@ -3,8 +3,10 @@ Description=Runs python based ble event logger after boot
 After=syslog.target network.target
 
 [Service]
+User=pi
 Type=forking
 ExecStart=/home/pi/smartenv-code/ble/launch_blescanner.sh
+WorkingDirectory=/home/pi/smartenv-code/ble
 
 [Install]
 WantedBy=multi-user.target
