@@ -144,7 +144,7 @@ class ScanDelegate(DefaultDelegate):
 					print("%s: %f, %f, %f, %f (tag)" % tag_data)
 
 					# publish to mqtt
-					msg = " ".join(str(x) for x in tag_data[1:])
+					msg = " ".join(str(x) for x in tag_data)
 					# print(msg)
 					ret = client1.publish("smartenv/tag",msg)
 
@@ -163,7 +163,7 @@ class ScanDelegate(DefaultDelegate):
 					print("%s: %d, %d, %d, %f (door)" % door_data)
 
 					# publish to mqtt
-					msg = " ".join(str(x) for x in door_data[1:])
+					msg = " ".join(str(x) for x in door_data)
 					# print(msg)
 					ret = client1.publish("smartenv/door", msg)
 
