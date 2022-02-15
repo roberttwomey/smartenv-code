@@ -4,7 +4,7 @@ After=syslog.target network.target
 
 [Service]
 Type=forking
-ExecStart=/home/pi/housemachine-ble/launch_blescanner.sh
+ExecStart=/home/pi/smartenv-code/ble/launch_blescanner.sh
 
 [Install]
 WantedBy=multi-user.target
