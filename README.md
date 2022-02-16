@@ -13,7 +13,7 @@ These examples explore sending (publishing), receiving (subscribing) and doing o
 
 - mqtt subscriber: https://editor.p5js.org/robert.twomey/sketches/dojZRNiSP
 - mqtt publishers:  https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS
-- mqtt subscriber: https://editor.p5js.org/robert.twomey/sketches/pZNnpo2GOD
+- mqtt logger: https://editor.p5js.org/robert.twomey/sketches/pZNnpo2GOD
 
 __Don't try these (experimental)__
 - mqttSubscriber_G1: https://editor.p5js.org/robert.twomey/sketches/-djHYLWZy
