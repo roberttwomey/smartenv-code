@@ -10,7 +10,8 @@
 
 - __How to find MAC addresses__: `ip link`
 - Show connections: `nmcli connection show`
-- Show ethernet address: `ip addr`
+- Show ethernet addresses: `ip addr`
+  - show address for device: `ip addr show dev wlan0`
 
 # Demo
 - Show demo on device: `edgetpu_demo --device`
