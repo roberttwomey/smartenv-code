@@ -19,10 +19,17 @@
 
 # Camera
 - https://coral.ai/docs/dev-board/camera/#connect-the-coral-camera
-- whole-image classification: 
 
+## whole-image classification: 
+Rates what is in the image:
 ```
 edgetpu_classify_server \
 --model ${DEMO_FILES}/mobilenet_v2_1.0_224_quant_edgetpu.tflite \
 --labels ${DEMO_FILES}/imagenet_labels.txt
+```
+
+## Face detection: 
+```
+edgetpu_detect \
+--model ${DEMO_FILES}/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite
 ```
