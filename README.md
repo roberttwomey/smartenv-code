@@ -12,12 +12,6 @@ We are exploring shiftr.io as our mqtt broker. You can view a live visualization
 
 These examples explore sending (publishing), receiving (subscribing) and doing other things with the mqtt messages.
 
-- mqtt publisher:  https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS
-- mqtt subscriber: https://editor.p5js.org/robert.twomey/sketches/dojZRNiSP
-- mqtt logger: https://editor.p5js.org/robert.twomey/sketches/pZNnpo2GOD
-
-__The Better Way (v2)__
-
 ### E8 Sensor Tags
 Use the G1 Iot gateway to read tags. Work with accelerometer data.
 - mqttPublisher_slider: https://editor.p5js.org/robert.twomey/sketches/lkXZ4-Aa8
@@ -38,3 +32,10 @@ __Tests__
   - (sends a static data packet in JSON format, as it were the G1 gateway)
 - mqttSubscriber_G1: https://editor.p5js.org/robert.twomey/sketches/-djHYLWZy
   - (receives data in JSON format from G1 gateway)
+
+__Old Sketches (v1)__
+These do not use the G1 gateway, and do not send messages as JSON:
+
+- mqtt publisher:  https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS
+- mqtt subscriber: https://editor.p5js.org/robert.twomey/sketches/dojZRNiSP
+- mqtt logger: https://editor.p5js.org/robert.twomey/sketches/pZNnpo2GOD
