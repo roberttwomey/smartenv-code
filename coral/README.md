@@ -35,4 +35,5 @@ edgetpu_detect \
 ```
 
 ## additional camera examples:
-https://github.com/google-coral/examples-camera
+- https://github.com/google-coral/examples-camera
+- pygame examples https://github.com/google-coral/examples-camera/tree/master/pygame
