@@ -9,6 +9,7 @@ Reads BLE advertising packets to parse accelerometer (and other) data. Transmit 
 We are exploring shiftr.io as our mqtt broker. You can view a live visualization of their public broker here: [https://www.shiftr.io/try/](https://www.shiftr.io/try/)
 
 ## p5 mqtt examples
+
 These examples explore sending (publishing), receiving (subscribing) and doing other things with the mqtt messages.
 
 - mqtt publisher:  https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS
