@@ -18,7 +18,15 @@ These examples explore sending (publishing), receiving (subscribing) and doing o
 
 __Don't try these (experimental)__
 These use the G1 IoT gateway and should be much less buggy than the raspberry pi.
-- mqttPublisher_JSON: https://editor.p5js.org/robert.twomey/sketches/uaCayQRDB (sends data via JSON)
-- mqttSubscriber_G1: https://editor.p5js.org/robert.twomey/sketches/-djHYLWZy (receives data via JSON)
-- mqttSubscriber_bargraph: https://editor.p5js.org/robert.twomey/sketches/dA6aKcBpu9 (receives JSON data and displays accelerometer as a bar graph) 
-- mqttSubscriber_teapot: https://editor.p5js.org/robert.twomey/sketches/cA0f-c5y0 (receives JSON data and uses accelerometer to rotate teapot)
+- mqttPublisher_slider: https://editor.p5js.org/robert.twomey/sketches/lkXZ4-Aa8
+  - (uses sliders to simluate accelerometers) 
+- mqttSubscriber_G1: https://editor.p5js.org/robert.twomey/sketches/-djHYLWZy
+  - (receives data in JSON format)
+- mqttSubscriber_bargraph: https://editor.p5js.org/robert.twomey/sketches/dA6aKcBpu9 
+  - (receives data and displays accelerometer as a bar graph)
+- mqttSubscriber_teapot: https://editor.p5js.org/robert.twomey/sketches/cA0f-c5y0
+  - (receives data and uses accelerometer to rotate teapot)
+
+__Leftovers__
+- mqttPublisher_JSON: https://editor.p5js.org/robert.twomey/sketches/uaCayQRDB
+  - (sends a static data packet in JSON format)
