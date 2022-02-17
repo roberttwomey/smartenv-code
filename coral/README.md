@@ -33,3 +33,6 @@ edgetpu_classify_server \
 edgetpu_detect \
 --model ${DEMO_FILES}/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite
 ```
+
+## additional camera examples:
+https://github.com/google-coral/examples-camera
