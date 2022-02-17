@@ -18,8 +18,8 @@ These examples explore sending (publishing), receiving (subscribing) and doing o
 
 __Don't try these (experimental)__
 These use the G1 IoT gateway and should be much less buggy than the raspberry pi.
-- mqttPublisher_slider: uses sliders to simluate accelerometers
-  - https://editor.p5js.org/robert.twomey/sketches/lkXZ4-Aa8
+- mqttPublisher_slider: https://editor.p5js.org/robert.twomey/sketches/lkXZ4-Aa8
+  - (uses sliders to simluate accelerometers)
 - mqttSubscriber_G1: https://editor.p5js.org/robert.twomey/sketches/-djHYLWZy
   - (receives data in JSON format)
 - mqttSubscriber_bargraph: https://editor.p5js.org/robert.twomey/sketches/dA6aKcBpu9 
