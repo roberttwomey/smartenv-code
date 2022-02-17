@@ -10,7 +10,7 @@ We are exploring shiftr.io as our mqtt broker. You can view a live visualization
 
 ## p5 mqtt examples
 
-These examples explore sending (publishing), receiving (subscribing) and doing other things with the mqtt messages.
+These examples explore sending (publishing), receiving (subscribing) and doing other things with the mqtt messages. They require you to be in a room with the G1 gateway in order to function and transmit data to the cloud.
 
 ### E8 Sensor Tags
 Use the G1 Iot gateway to read tags. Work with accelerometer data.
