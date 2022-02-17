@@ -27,6 +27,7 @@ Use the G1 Iot gateway to read tags. Work with accelerometer data.
 ### S4 Door Sensors
 [to come]
 
+### Leftovers
 __Tests__
 - mqttPublisher_JSON: https://editor.p5js.org/robert.twomey/sketches/uaCayQRDB
   - (sends a static data packet in JSON format, as it were the G1 gateway)
