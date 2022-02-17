@@ -17,6 +17,8 @@ These examples explore sending (publishing), receiving (subscribing) and doing o
 - mqtt logger: https://editor.p5js.org/robert.twomey/sketches/pZNnpo2GOD
 
 __The Better Way (v2)__
+
+### E8 Sensor Tags
 Use the G1 Iot gateway to read tags. Work with accelerometer data.
 - mqttPublisher_slider: https://editor.p5js.org/robert.twomey/sketches/lkXZ4-Aa8
   - (uses sliders to simluate accelerometers)
@@ -24,6 +26,12 @@ Use the G1 Iot gateway to read tags. Work with accelerometer data.
   - (receives data and displays accelerometer as a bar graph)
 - mqttSubscriber_teapot: https://editor.p5js.org/robert.twomey/sketches/cA0f-c5y0
   - (receives data and uses accelerometer to rotate teapot)
+
+### S1 Temperature/Humidity
+[to come]
+
+### S4 Door Sensors
+[to come]
 
 __Tests__
 - mqttPublisher_JSON: https://editor.p5js.org/robert.twomey/sketches/uaCayQRDB
