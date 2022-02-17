@@ -16,8 +16,8 @@ These examples explore sending (publishing), receiving (subscribing) and doing o
 - mqtt subscriber: https://editor.p5js.org/robert.twomey/sketches/dojZRNiSP
 - mqtt logger: https://editor.p5js.org/robert.twomey/sketches/pZNnpo2GOD
 
-__Don't try these (experimental)__
-These use the G1 IoT gateway and should be much less buggy than the raspberry pi.
+__The Better Way (v2)__
+Use the G1 Iot gateway to read tags. Work with accelerometer data.
 - mqttPublisher_slider: https://editor.p5js.org/robert.twomey/sketches/lkXZ4-Aa8
   - (uses sliders to simluate accelerometers)
 - mqttSubscriber_bargraph: https://editor.p5js.org/robert.twomey/sketches/dA6aKcBpu9 
