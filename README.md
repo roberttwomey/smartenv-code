@@ -26,7 +26,8 @@ Use the G1 Iot gateway to read tags. Work with accelerometer data.
   - (reads and displays values from temp/humidity sensor)
 
 ### S4 Door Sensors
-[to come]
+- doorSubscriber_mqtt: https://editor.p5js.org/robert.twomey/sketches/UWiFQoxSg
+  - (reads and displays open/shut, uninstalled, changed from door sensor)
 
 ### Leftovers
 __Tests__
