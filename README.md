@@ -22,7 +22,8 @@ Use the G1 Iot gateway to read tags. Work with accelerometer data.
   - (receives data and uses accelerometer to rotate teapot)
 
 ### S1 Temperature/Humidity
-[to come]
+- tempSubscriber_mqtt: https://editor.p5js.org/robert.twomey/sketches/dA6aKcBpu9
+  - (reads and displays values from temp/humidity sensor)
 
 ### S4 Door Sensors
 [to come]
