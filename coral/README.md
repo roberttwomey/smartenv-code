@@ -6,4 +6,6 @@
 - Install the mendel dev tools: `python3 -m pip install --user mendel-development-tool`
 - Install the USB drivers for MacOS https://coral.ai/docs/dev-board/serial-console/#connect-with-macos
 ... more steps
-- mendel, mendel
+- login `mendel`, pwd `mendel`
+
+- __How to find MAC addresses__: ip link
