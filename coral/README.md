@@ -8,4 +8,11 @@
 ... more steps
 - login `mendel`, pwd `mendel`
 
-- __How to find MAC addresses__: ip link
+- __How to find MAC addresses__: `ip link`
+- Show connections: `nmcli connection show`
+- Show ethernet address: `ip addr`
+
+# Demo
+- Show demo on device: `edgetpu_demo --device`
+- Show demo vis a web server: `edgetpu_demo --stream`
+- 
