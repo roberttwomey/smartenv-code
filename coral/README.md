@@ -19,6 +19,8 @@
 
 # Camera
 - https://coral.ai/docs/dev-board/camera/#connect-the-coral-camera
-- whole-image classification: ```edgetpu_classify_server \
+- whole-image classification: ```
+- edgetpu_classify_server \
 --model ${DEMO_FILES}/mobilenet_v2_1.0_224_quant_edgetpu.tflite \
---labels ${DEMO_FILES}/imagenet_labels.txt```
+--labels ${DEMO_FILES}/imagenet_labels.txt
+```
