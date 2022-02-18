@@ -8,7 +8,7 @@ Reads BLE advertising packets to parse accelerometer (and other) data. Transmit 
 ## To verify mqtt messaging: 
 We are exploring shiftr.io as our mqtt broker. You can view a live visualization of their public broker here: [https://www.shiftr.io/try/](https://www.shiftr.io/try/)
 
-## p5 mqtt examples
+## p5 examples
 
 These examples explore sending (publishing), receiving (subscribing) and doing other things with the mqtt messages. They require you to be in a room with the G1 gateway in order to function and transmit data to the cloud.
 
