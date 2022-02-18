@@ -5,7 +5,7 @@ code examples for EMAR391 009 Smart Environments SP22
 Reads BLE advertising packets to parse accelerometer (and other) data. Transmit these to a mqtt broker (shiftr.io). Runs as a service on the Raspbery Pi.
 - see files here [ble/](ble)
 
-## To verify mqtt messaging: 
+## Message Broker
 We are exploring shiftr.io as our mqtt broker. You can view a live visualization of their public broker here: [https://www.shiftr.io/try/](https://www.shiftr.io/try/)
 
 ## p5 examples
