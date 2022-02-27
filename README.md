@@ -23,7 +23,6 @@ Technologies:
  
 __References__
 - pixel_ring repository https://github.com/respeaker/pixel_ring
-- 
 
 # Google Coral Board
 AI inference at the edge. Computer vision and speech recognition. 
