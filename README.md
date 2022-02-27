@@ -1,6 +1,36 @@
 # smartenv-code
 code examples for EMAR391 009 Smart Environments SP22
 
+# Respeaker Array and Lights
+
+- wake word detection
+- live speech transcription (ASR)
+- live speech transcription and Direction of Arrival (DOA)
+- ODAS (Open embeddeD Audition System) https://github.com/introlab/odas
+- lights
+  - `/smartenv/respeaker/wakeup`
+  - `/smartenv/respeaker/think`
+  - `/smartenv/respeaker/sleep`
+  - `/smartenv/respeaker/off`
+ 
+__References__
+1. Controlling the lights on respeaker: https://github.com/respeaker/pixel_ring/blob/master/examples/respeaker_4mic_array.py
+2. 
+
+# Google Coral Board
+AI inference at the edge. Computer vision and speech recognition. 
+
+# Raspberry Pi
+Can do a lot. We will primarily use it as an output device (audio, video, etc.) 
+
+# Minew G1 IoT gateway
+Reading BLE esensor tags and streaming data to MQTT broker or other cloud system.
+
+# Particle Photon
+Wireless-enabled microcontroller. Can use to operate actuators. 
+
+# BLE Sensor Tags
+
 ## RPI as IoT Gatweay
 Reads BLE advertising packets to parse accelerometer (and other) data. Transmit these to a mqtt broker (shiftr.io). Runs as a service on the Raspbery Pi.
 - see files here [ble/](ble)
