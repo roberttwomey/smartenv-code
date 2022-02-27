@@ -22,7 +22,7 @@ Technologies:
   - `/smartenv/respeaker/off`
  
 __References__
-[^1]. Controlling the lights on respeaker: https://github.com/respeaker/pixel_ring/blob/master/examples/respeaker_4mic_array.py
+[^1]: Controlling the lights on respeaker https://github.com/respeaker/pixel_ring/blob/master/examples/respeaker_4mic_array.py
 2. 
 
 # Google Coral Board
