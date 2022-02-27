@@ -2,12 +2,12 @@
 code examples for EMAR391 009 Smart Environments SP22
 
 Technologies: 
-- [Respeaker](#respeaker)
-- [Coral Board](#google-coral-board)
-- [Raspberry Pi](#raspberry-pi)
-- [IoT Gateway](#iot-gateway)
-- [Particle Photon](#particle-photon)
-- [BLE Sensor Tags](#ble-sensor-tags) 
+- [Respeaker](#respeaker) circular and linear mic arrays (4-6 mics)
+- [Coral Board](#google-coral-board) edge inference (mobilenet, yolo, face detection, etc.)
+- [Raspberry Pi](#raspberry-pi) media playback
+- [IoT Gateway](#iot-gateway) relaying BLE and other sensor signals
+- [Particle Photon](#particle-photon) actuators
+- [BLE Sensor Tags](#ble-sensor-tags) event-triggered acceleration, door opening, temperature and humidity
 
 # Respeaker
 
