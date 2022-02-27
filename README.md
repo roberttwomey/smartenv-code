@@ -15,30 +15,15 @@ Technologies:
 - live speech transcription (ASR)
 - live speech transcription and Direction of Arrival (DOA)
 - ODAS (Open embeddeD Audition System) https://github.com/introlab/odas
-- controlling the pixel ring on the respeaker, from [pixel_ring][1]:
+- controlling the pixel ring on the respeaker, from [1](https://github.com/respeaker/pixel_ring/blob/master/examples/respeaker_4mic_array.py):
   - `/smartenv/respeaker/wakeup`
   - `/smartenv/respeaker/think`
   - `/smartenv/respeaker/sleep`
   - `/smartenv/respeaker/off`
  
 __References__
-
-1. [pixelring]: Controlling the lights on respeaker https://github.com/respeaker/pixel_ring/blob/master/examples/respeaker_4mic_array.py
-2. nothing yet 
-
-
-See the docs of [testthat][2] on how to write unit tests.
-
-Links
------
-
-- [RStudio Devtools][1]
-- [testthat][2]
-- [More unit test examples][3]
-
-[1]: https://stackoverflow.com/users/214446/mb21
-[2]: https://github.com/hadley/testthat
-[3]: http://r-pkgs.had.co.nz/tests.html
+- pixel_ring repository https://github.com/respeaker/pixel_ring
+- 
 
 # Google Coral Board
 AI inference at the edge. Computer vision and speech recognition. 
