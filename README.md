@@ -15,7 +15,7 @@ Technologies:
 - live speech transcription (ASR)
 - live speech transcription and Direction of Arrival (DOA)
 - ODAS (Open embeddeD Audition System) https://github.com/introlab/odas
-- controlling the pixel ring on the respeaker, from [1][pixel_ring]:
+- controlling the pixel ring on the respeaker, from [pixel_ring][1]:
   - `/smartenv/respeaker/wakeup`
   - `/smartenv/respeaker/think`
   - `/smartenv/respeaker/sleep`
