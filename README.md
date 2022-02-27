@@ -1,7 +1,15 @@
 # smartenv-code
 code examples for EMAR391 009 Smart Environments SP22
 
-# Respeaker Array and Lights
+Technologies: 
+- [Respeaker](#respeaker)
+- [Coral Board](#google-coral-board)
+- [Raspberry Pi](#raspberry-pi)
+- [IoT Gateway](#iot-gateway)
+- [Particle Photon](#particle-photon)
+- [BLE Sensor Tags](#ble-sensor-tags) 
+
+# Respeaker
 
 - wake word detection
 - live speech transcription (ASR)
@@ -23,8 +31,8 @@ AI inference at the edge. Computer vision and speech recognition.
 # Raspberry Pi
 Can do a lot. We will primarily use it as an output device (audio, video, etc.) 
 
-# Minew G1 IoT gateway
-Reading BLE esensor tags and streaming data to MQTT broker or other cloud system.
+# IoT gateway
+Reading BLE esensor tags and streaming data to MQTT broker or other cloud system. Minew G1 IoT Gateway
 
 # Particle Photon
 Wireless-enabled microcontroller. Can use to operate actuators. 
