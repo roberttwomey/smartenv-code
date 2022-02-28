@@ -12,7 +12,7 @@ Script that will listen to the microphone, recognize with google speech, and str
 
 topic is `smartenv/speechrec`
 
-# P5
+# P5 Examples
 
 - speechSubscriber_mqtt: https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs
   - (mqtt subscriber that listens for recognized speech)
