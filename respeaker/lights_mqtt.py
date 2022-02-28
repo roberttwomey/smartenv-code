@@ -43,22 +43,22 @@ def messageDecoder(client, userdata, msg):
     print("^^^ payload message = ", message)
     if message == "wake":
         pixel_ring.wakeup()
-        time.sleep(3)
+        time.sleep(0.1)
     elif message == "think":
         pixel_ring.think()
-        time.sleep(3)
+        time.sleep(0.1)
     elif message == "speak":
         pixel_ring.speak()
-        time.sleep(6)
+        time.sleep(0.1)
     elif message == "off":
         pixel_ring.off()
         time.sleep(3)
     elif message == "echo":
         pixel_ring.change_pattern('echo')
-        time.sleep(3)
+        time.sleep(0.1)
     elif message == 'google':
         pixel_ring.change_pattern('google')
-        time.sleep(3)
+        time.sleep(0.1)
     elif message.startswith("color"):
         r, g, b = message.split(" ")[1:]
         pixel_ring.set_color(r=int(r), g=int(g), b=int(b))
