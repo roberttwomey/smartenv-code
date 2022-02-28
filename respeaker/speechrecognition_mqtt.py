@@ -1,5 +1,12 @@
-# Uberin SpeechRecognition package:
+# speechrecognition_mqtt.py
+#
+# listens for audio on a respeaker 6 mic array, and uses google speech recognition to retrieve text
+#
+# example for UNL Smart Environments sp2022 | rtwomey@unl.edu | roberttwomey.com
+#
+# Based on this example from the Uberi SpeechRecognition package:
 # from https://github.com/Uberi/speech_recognition/blob/master/speech_recognition/__main__.py
+# Plus some mqtt magic
 
 import speech_recognition as sr
 
