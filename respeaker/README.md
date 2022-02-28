@@ -29,9 +29,6 @@ __Speech Subscriber in p5__
 - speechSubscriber_mqtt: https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs
   - (mqtt subscriber that listens for recognized speech)
 
-__Reference__
-- SpeechRecognition source code: https://github.com/Uberi/speech_recognition
-
 ## Indicator Lights
 Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS) example to control the light ring.
 
@@ -56,4 +53,5 @@ Example adapted from [respeaker pixel_ring examples](https://github.com/respeake
 # References
 - speechrecognition source code: https://github.com/Uberi/speech_recognition
   - pypi page: https://pypi.org/project/SpeechRecognition/
+- pixel_ring source code: https://github.com/respeaker/pixel_ring
 - picovoice porcupine respeaker demo: https://github.com/Picovoice/porcupine/tree/master/demo/respeaker/ppnrespeakerdemo
