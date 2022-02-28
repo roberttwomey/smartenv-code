@@ -63,7 +63,7 @@ try:
                 
                 # publish to mqtt
                 ret = client1.publish(topic, value)
-                print("published {} to mqtt {}".format(topic, value)))
+                print("published {} to mqtt \"{}\"".format(topic, value))
                 
         except sr.UnknownValueError:
             print("Oops! Didn't catch that")
