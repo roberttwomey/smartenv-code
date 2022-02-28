@@ -1,5 +1,5 @@
 # Examples for the Respeaker 6-Microphone Array
-The product: 
+[this product]
 
 Capabilities:
 - wake word detection
