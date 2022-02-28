@@ -14,7 +14,8 @@ topic is `smartenv/speechrec`
 
 # P5
 
-- mqtt subscriber that listens for recognized speech: https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs
+- speechSubscriber_mqtt: https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs
+  - (mqtt subscriber that listens for recognized speech)
 
 # References
 - speechrecognition source code: https://github.com/Uberi/speech_recognition
