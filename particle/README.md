@@ -19,14 +19,15 @@ __Topic__: `/smartenv/photon1`
 
 __Messages__
 
-Indicator light: 
-- `red` turns indicator LED red
-- `blue` turns indicator LED blue
-- `green` turns indicator LED green
-
 Relay control: 
 - (attached to pin D0)
 - `on` turns relay on
   -  <img width="312" alt="image" src="https://user-images.githubusercontent.com/1598545/155919888-d36e200e-ebb1-4f62-a16a-ae6e84618ad5.png">
 - `off` turns realy off
   - <img width="310" alt="image" src="https://user-images.githubusercontent.com/1598545/155919901-c60193ac-b4ea-4248-90b1-6887a44c5053.png">
+
+Indicator light: 
+- `red` turns indicator LED red
+- `blue` turns indicator LED blue
+- `green` turns indicator LED green
+- `white` (or anything that is not the above 5 commands) turns the indicator LED white
