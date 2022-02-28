@@ -3,10 +3,10 @@
 
 Capabilities:
 - wake word detection
-- live speech transcription (ASR)
+- live [speech recognition (ASR)](#speech-recognition)
 - Direction of Arrival (DOA) — where did sound come from
 - ODAS (Open embeddeD Audition System) https://github.com/introlab/odas
-- controlling the pixel ring on the respeaker
+- [controlling the indicator lights / pixel ring on the respeaker](#indicator-lights)
 
 # Setup
 
