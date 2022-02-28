@@ -6,7 +6,7 @@ Technologies:
 - [Coral Board](#google-coral-board) edge inference (mobilenet, yolo, face detection, etc.)
 - [Raspberry Pi](#raspberry-pi) media playback
 - [IoT Gateway](#iot-gateway) relaying BLE and other sensor signals
-- [Particle Photon](#particle-photon) actuators
+- [Particle Photon](/particle) actuators
 - [BLE Sensor Tags](#ble-sensor-tags) event-triggered acceleration, door opening, temperature and humidity
 
 # Google Coral Board
@@ -17,9 +17,6 @@ Can do a lot. We will primarily use it as an output device (audio, video, etc.)
 
 # IoT gateway
 Reading BLE esensor tags and streaming data to MQTT broker or other cloud system. Minew G1 IoT Gateway
-
-# Particle Photon
-Wireless-enabled microcontroller. Can use to operate actuators. 
 
 # BLE Sensor Tags
 
