@@ -13,7 +13,7 @@ Source code link: https://go.particle.io/shared_apps/621c4137366a9b0009b32c69
 
 The particle photon connects to NU-IoT and then subscribes to an MQTT topic.
 
-We can use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) to test it out. ([edit link])(https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS).
+We can use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) to test it out. ([edit link](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS)).
 
 __Topic__: `/smartenv/photon1`
 
