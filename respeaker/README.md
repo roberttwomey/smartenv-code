@@ -28,6 +28,9 @@ __Speech Subscriber in p5__
 - speechSubscriber_mqtt: https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs
   - (mqtt subscriber that listens for recognized speech)
 
+__Reference__
+- SpeechRecognition source code: https://github.com/Uberi/speech_recognition
+
 ## Indicator Lights
 Use our p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS) example with the following topic and message: 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/1598545/155911682-2b705b31-fd37-4f91-b8c5-f247b3f44e58.png">
