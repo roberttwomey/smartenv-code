@@ -10,6 +10,5 @@
 # Patches
 
 ## Simple subscribe / publish example
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/1598545/155996928-d008fb7b-5e71-4e50-90da-53fb21a37663.png">
-
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/1598545/155996928-d008fb7b-5e71-4e50-90da-53fb21a37663.png">
 [mqtt-simple.pd](mqtt-simple.pd)
