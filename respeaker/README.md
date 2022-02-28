@@ -43,7 +43,9 @@ Control Messages:
   - `/smartenv/audionode` with value `think`
   - `/smartenv/audionode` with value `sleep`
   - `/smartenv/audionode` with value `off`
-  - `/smartenv/audionode` with value `color R G B` NOT YET IMPLEMENTED
+  - `/smartenv/audionode` with value `color R G B`
+    - <img width="369" alt="image" src="https://user-images.githubusercontent.com/1598545/155913062-76b7b920-d800-406c-818c-178ca0fb44b7.png">
+
 
 Example adapted from [respeaker pixel_ring examples](https://github.com/respeaker/pixel_ring/blob/master/examples/respeaker_4mic_array.py) with some MQTT special sauce.
 
