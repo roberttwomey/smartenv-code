@@ -23,7 +23,7 @@ from apa102 import APA102
 
 # mqtt
 import paho.mqtt.client as paho
-client = None
+client1 = None
 
 COLORS_RGB = dict(
     blue=(0, 0, 255),
