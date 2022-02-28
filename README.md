@@ -1,13 +1,19 @@
 # smartenv-code
 code examples for EMAR391 009 Smart Environments SP22
 
-Technologies: 
+Devices: 
 - [Respeaker](/respeaker) circular and linear mic arrays (4-6 mics)
 - [Coral Board](#google-coral-board) edge inference (mobilenet, yolo, face detection, etc.)
 - [Raspberry Pi](#raspberry-pi) media playback
 - [IoT Gateway](#iot-gateway) relaying BLE and other sensor signals
 - [Particle Photon](/particle) wireless IoT board to do sensors and actuators over wifi
 - [BLE Sensor Tags](#ble-sensor-tags) event-triggered acceleration, door opening, temperature and humidity
+
+Languages:
+- [PureData](/puredata) mqtt messaging with puredata
+
+Platforms:
+- Shiftr.io for now. We can use the eclipse mqtt server instead.
 
 # Google Coral Board
 AI inference at the edge. Computer vision and speech recognition. 
