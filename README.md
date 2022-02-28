@@ -20,6 +20,9 @@ Technologies:
   - `/smartenv/respeaker/think`
   - `/smartenv/respeaker/sleep`
   - `/smartenv/respeaker/off`
+## Picovoice Porcupine
+- picovoice porcupine respeaker demo: https://github.com/Picovoice/porcupine/tree/master/demo/respeaker/ppnrespeakerdemo
+- 
  
 __References__
 - pixel_ring repository https://github.com/respeaker/pixel_ring
