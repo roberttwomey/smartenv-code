@@ -17,11 +17,12 @@ Capabilities:
 ## Speech Recognition
 The best solution I have found is the [speechrecognition](https://pypi.org/project/SpeechRecognition/) package, which uses google speech services by default.
 
-This script will listen to the microphone, recognize with google speech, and stream to an mqtt broker:
+This script will listen to the microphone, recognize anything it hears, and send the result to an mqtt broker. To start the script on the pi use:
 
+To run the script on the pi: 
 `python speechrecognition_mqtt.py`
 
-this script publishes to `smartenv/audionode/speech`
+Publishes to `smartenv/audionode/speech`
 
 __Speech Subscriber in p5__ 
 
