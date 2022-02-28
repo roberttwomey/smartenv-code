@@ -97,6 +97,15 @@ class PorcupineDemo(Thread):
 
             self._porcupine.delete()
 
+# MQTT functions
+def on_publish(client, userdata, result):
+    print("published: "+str(userdata))
+    pass
+
+def on_connect():
+    print("connected...")
+    pass
+    
 def connectMQTT():
     clientName = "smartenv"
     broker_addr= "public.cloud.shiftr.io"
@@ -105,16 +114,6 @@ def connectMQTT():
     topic = "smartenv/"
     mqtt_user = "public"
     mqtt_password = "public"
-
-    # MQTT functions
-    def on_publish(client,userdata,result):
-        print("published: "+str(userdata))
-        pass
-
-    def on_connect():
-        print("connected...")
-        pass
-
 
     client1 = paho.Client(clientName)
     client1.on_connect = on_connect
