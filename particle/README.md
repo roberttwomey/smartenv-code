@@ -11,18 +11,13 @@ Use Particle Web IDE: https://build.particle.io/
 
 Source code link: https://go.particle.io/shared_apps/621c4137366a9b0009b32c69
 
-The particle photon connects to NU-IoT and then subscribes to MQTT topic.
-
-Topic: `/smartenv/photon1`
-
-
-__Messages__
-
-__Usage__
+The particle photon connects to NU-IoT and then subscribes to an MQTT topic.
 
 We can use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS) to test it out. 
 
 Topic: `/smartenv/photon1`
+
+__Messages__
 
 Indicator light: 
 - `red` turns indicator LED red
