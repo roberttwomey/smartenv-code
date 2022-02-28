@@ -53,9 +53,16 @@ def messageDecoder(client, userdata, msg):
     elif message == "off":
         pixel_ring.off()
         time.sleep(3)
+    elif message == "echo":
+        pixel_ring.change_pattern('echo')
+        time.sleep(3)
+    elif message == 'google':
+        pixel_ring.change_pattern('google')
+        time.sleep(3)
     elif message.startswith("color"):
         r, g, b = message.split(" ")[1:]
         pixel_ring.set_color(r=int(r), g=int(g), b=int(b))
+
     # respond to message, here. if/then to parse out various messages
 
 
