@@ -7,8 +7,6 @@ Capabilities:
 - live speech transcription and Direction of Arrival (DOA)
 - ODAS (Open embeddeD Audition System) https://github.com/introlab/odas
 - controlling the pixel ring on the respeaker
-- 
-
 
 # Setup
 
