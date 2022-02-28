@@ -135,7 +135,7 @@ def main():
 
     args = parser.parse_args()
 
-    connectToMQTT()
+    connectMQTT()
     
     o = PorcupineDemo(access_key=args.access_key,
                       device_index=args.audio_device_index,
