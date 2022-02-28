@@ -12,5 +12,6 @@
 ## Simple subscribe / publish example
 [mqtt-simple.pd](mqtt-simple.pd)
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/1598545/155996928-d008fb7b-5e71-4e50-90da-53fb21a37663.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/1598545/155999095-829369ac-802a-4625-93a8-6510f3d61ae0.png">
+
 
