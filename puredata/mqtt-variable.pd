@@ -1,0 +1,80 @@
+#N canvas 542 36 809 745 12;
+#X obj 300 40 mqtt_client;
+#X obj 530 230 print;
+#X obj 476 261 route connected publish_result subscribe;
+#X obj 476 288 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 568 288 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 660 288 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X msg 380 -220 disconnect;
+#X obj 300 100 list trim;
+#X msg 360 -250 connect public.cloud.shiftr.io pd-client public public
+;
+#X obj 40 180 print smartenv;
+#X obj 560 90 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 560 110 unsubscribe smartenv/photon3;
+#X obj 560 0 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 190 220 unpack s s;
+#X obj 160 150 route smartenv;
+#X obj 290 200 print rejection;
+#X symbolatom 190 270 10 0 0 0 - - -, f 10;
+#X symbolatom 280 270 10 0 0 0 - - -, f 10;
+#X text 30 340 https://smartenv.roberttwomey.com;
+#X text 30 400 Spring 2022;
+#X text 30 370 rtwomey@unl.edu;
+#X text 250 -300 simple subscribe and publish example with MQTT;
+#X obj 70 -160 symbol;
+#X msg 70 -210 on;
+#X msg 140 -210 off;
+#X obj 540 -120 symbol;
+#X obj 490 -170 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 400 -170 CLICK ME >>>;
+#X msg 540 -160 smartenv;
+#X obj 570 -210 t b b;
+#X obj 540 -80 pack s s;
+#X obj 620 -120 l2s;
+#X obj 429 -31 value;
+#X msg 560 50 subscribe smartenv/photon3;
+#X msg 635 -36 set subscribe \$1/\$2;
+#X msg 630 80 set unsubscribe \$1/\$2;
+#X symbolatom 620 -160 10 0 0 0 - - -, f 10;
+#X msg 70 -100 publish smartenv/photon2 \$1;
+#X obj 115 -259 value myaddr;
+#X connect 0 0 7 0;
+#X connect 0 1 1 0;
+#X connect 0 1 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 2 2 5 0;
+#X connect 6 0 0 0;
+#X connect 7 0 14 0;
+#X connect 8 0 0 0;
+#X connect 10 0 11 0;
+#X connect 11 0 0 0;
+#X connect 12 0 33 0;
+#X connect 13 0 16 0;
+#X connect 13 1 17 0;
+#X connect 14 0 13 0;
+#X connect 14 0 9 0;
+#X connect 14 1 15 0;
+#X connect 22 0 37 0;
+#X connect 23 0 22 0;
+#X connect 24 0 22 0;
+#X connect 25 0 30 0;
+#X connect 26 0 29 0;
+#X connect 28 0 25 0;
+#X connect 29 0 28 0;
+#X connect 29 1 36 0;
+#X connect 30 0 34 0;
+#X connect 30 0 35 0;
+#X connect 31 0 30 1;
+#X connect 33 0 0 0;
+#X connect 34 0 33 0;
+#X connect 35 0 11 0;
+#X connect 36 0 31 0;
+#X connect 37 0 0 0;
