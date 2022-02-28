@@ -10,8 +10,10 @@
 # Patches
 
 ## Simple subscribe / publish example
-[mqtt-simple.pd](mqtt-simple.pd)
+[mqtt-simple.pd](mqtt-simple.pd) - sends messages to particle photon
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/1598545/155999095-829369ac-802a-4625-93a8-6510f3d61ae0.png">
 
+[speechSubscribe.pd](speechSubscribe.pd) - controls lights on respeaker and also listens for speech transcriptions
 
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/1598545/156007366-073a9345-7ce2-4891-a589-6cb1e823307c.png">
