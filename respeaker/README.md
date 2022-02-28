@@ -38,8 +38,9 @@ Topic: `/smartenv/audionode`
 Control Messages:
   - `/smartenv/audionode` with value `wake`
   - `/smartenv/audionode` with value `think`
-  - `/smartenv/respeaker` with value `sleep`
-  - `/smartenv/respeaker` with value `off`
+  - `/smartenv/audionode` with value `sleep`
+  - `/smartenv/audionode` with value `off`
+  - `/smartenv/audionode` with value `color R G B` NOT YET IMPLEMENTED
 
 # References
 - speechrecognition source code: https://github.com/Uberi/speech_recognition
