@@ -6,9 +6,8 @@ Capabilities:
 - live speech transcription (ASR)
 - live speech transcription and Direction of Arrival (DOA)
 - ODAS (Open embeddeD Audition System) https://github.com/introlab/odas
-- controlling the pixel ring on the respeaker, from [respeaker pixel_ring examples](https://github.com/respeaker/pixel_ring/blob/master/examples/respeaker_4mic_array.py):
-
-The best solution I have found is the [speechrecognition](https://pypi.org/project/SpeechRecognition/) package, which uses google speech services by default.
+- controlling the pixel ring on the respeaker
+- 
 
 
 # Setup
@@ -18,7 +17,9 @@ The best solution I have found is the [speechrecognition](https://pypi.org/proje
 # Use
 
 ## Speech Recognition
-This script that will listen to the microphone, recognize with google speech, and stream to an mqtt broker:
+The best solution I have found is the [speechrecognition](https://pypi.org/project/SpeechRecognition/) package, which uses google speech services by default.
+
+This script will listen to the microphone, recognize with google speech, and stream to an mqtt broker:
 
 `python speechrecognition_mqtt.py`
 
@@ -41,6 +42,9 @@ Control Messages:
   - `/smartenv/audionode` with value `sleep`
   - `/smartenv/audionode` with value `off`
   - `/smartenv/audionode` with value `color R G B` NOT YET IMPLEMENTED
+
+Example adapted from [respeaker pixel_ring examples](https://github.com/respeaker/pixel_ring/blob/master/examples/respeaker_4mic_array.py) with some MQTT special sauce.
+
 
 ## Wakeword Detection
 [Not yet implemented]
