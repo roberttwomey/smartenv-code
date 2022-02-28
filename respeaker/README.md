@@ -1,4 +1,4 @@
-# Examples for Respeaker 6-Microphone Array
+# Examples for the Respeaker 6-Microphone Array
 The product: 
 
 Capabilities:
