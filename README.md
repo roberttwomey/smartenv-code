@@ -6,7 +6,7 @@ Technologies:
 - [Coral Board](#google-coral-board) edge inference (mobilenet, yolo, face detection, etc.)
 - [Raspberry Pi](#raspberry-pi) media playback
 - [IoT Gateway](#iot-gateway) relaying BLE and other sensor signals
-- [Particle Photon](/particle) actuators
+- [Particle Photon](/particle) wireless IoT board to do sensors and actuators over wifi
 - [BLE Sensor Tags](#ble-sensor-tags) event-triggered acceleration, door opening, temperature and humidity
 
 # Google Coral Board
