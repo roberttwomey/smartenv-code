@@ -30,7 +30,7 @@ clientName = "smartenv"
 broker_addr= "public.cloud.shiftr.io"
 #broker_addr= "34.77.13.55"
 broker_port = 443 # ignored, https not working right now
-topic = "smartenv/speech"
+topic = "smartenv/audionode/speech"
 mqtt_user = "public"
 mqtt_password = "public"
 
