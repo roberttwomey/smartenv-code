@@ -2,11 +2,11 @@
 [this product]
 
 Capabilities:
-- wake word detection
-- live [speech recognition (ASR)](#speech-recognition)
+- [Speech Recognition](#speech-recognition) - listening for audio and transcribing it / pushing it to shiftr
+- [Indicator Lights](#indicator-lights) - controlling the indicator lights / pixel ring on the respeaker
+- Wake Word Detection
 - Direction of Arrival (DOA) — where did sound come from
 - ODAS (Open embeddeD Audition System) https://github.com/introlab/odas
-- [controlling the indicator lights / pixel ring on the respeaker](#indicator-lights)
 
 # Setup
 
