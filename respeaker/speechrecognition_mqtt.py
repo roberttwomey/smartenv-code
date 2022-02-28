@@ -16,6 +16,14 @@ r = sr.Recognizer()
 m = sr.Microphone()
 
 # mqtt
+def on_publish(client, userdata, result):
+    print("published: "+str(userdata))
+    pass
+
+def on_connect():
+    print("connected...")
+    pass
+
 client1 = None
 
 clientName = "smartenv"
