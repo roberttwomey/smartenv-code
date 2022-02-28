@@ -1,27 +1,14 @@
+# Puredata and smart environment stuff via MQTT
+[TK Overview]
+
 # Setup
-from https://www.waveshare.com/wiki/6inch_HD_e-Paper_HAT
+1. Install tge appropriate version of **purr-data** from [here](https://agraef.github.io/purr-data/)
+2. Download a release of `mqtt-client` from [here](https://github.com/njazz/mqtt-client-object/releases/tag/0.0.2)
+3. Unzip the file. Rename the resulting folder to `mqtt-client`. Copy to `~/Library/Pd-l2ork`. Make that folder if it does not exist. 
+4. Start puredata. You should be able to use the mqtt-client. 
 
-Open terminal of Raspberry Pi, and install bcm2835 libraries
-```
-wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.62.tar.gz
-tar zxvf bcm2835-1.62.tar.gz
-cd bcm2835-1.62
-./configure
-make
-sudo make check
-sudo make install
-```
+# Patches
 
-Enable SPI interface
-`sudo raspi-config`
-
-Choose Interfacing Options ->SPI->Yes
-
-Download demo codes and compile it
-```
-git clone https://github.com/waveshare/IT8951-ePaper.git
-cd IT8951-ePaper/Raspberry
-sudo make clean
-sudo make -j4```
-
-Check the VCOM value on the FPC
+## Simple subscribe / publish example
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/1598545/155996928-d008fb7b-5e71-4e50-90da-53fb21a37663.png">
+[mqtt-simple.pd](mqtt-simple.pd)
