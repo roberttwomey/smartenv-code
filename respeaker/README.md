@@ -33,7 +33,7 @@ __Reference__
 - SpeechRecognition source code: https://github.com/Uberi/speech_recognition
 
 ## Indicator Lights
-Use our p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS) example with the following topic and messages. 
+Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS) example to control the light ring.
 
 MQTT Topic: `/smartenv/audionode`
 
