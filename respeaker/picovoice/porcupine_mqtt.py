@@ -23,6 +23,7 @@ from apa102 import APA102
 
 # mqtt
 import paho.mqtt.client as paho
+client = None
 
 COLORS_RGB = dict(
     blue=(0, 0, 255),
@@ -82,6 +83,11 @@ class PorcupineDemo(Thread):
                 if keyword_index >= 0:
                     print("detected '%s'" % self._keywords[keyword_index])
                     self._set_color(COLORS_RGB[KEYWORDS_COLOR[self._keywords[keyword_index]]])
+                    
+                    # publish to mqtt
+                    ret = client1.publish("smartenv/voice/", self._keywords[keyword_index])
+                    print("published to mqtt")
+                    
         except KeyboardInterrupt:
             sys.stdout.write('\b' * 2)
             print('Stopping ...')
@@ -91,6 +97,32 @@ class PorcupineDemo(Thread):
 
             self._porcupine.delete()
 
+def connectMQTT():
+    clientName = "smartenv"
+    broker_addr= "public.cloud.shiftr.io"
+    #broker_addr= "34.77.13.55"
+    broker_port = 443 # ignored, https not working right now
+    topic = "smartenv/"
+    mqtt_user = "public"
+    mqtt_password = "public"
+
+    # MQTT functions
+    def on_publish(client,userdata,result):
+        print("published: "+str(userdata))
+        pass
+
+    def on_connect():
+        print("connected...")
+        pass
+
+
+    client1 = paho.Client(clientName)
+    client1.on_connect = on_connect
+    # client1.on_publish = on_publish # doesn't seem to work
+    client1.username_pw_set(mqtt_user, password=mqtt_password)
+    print("connecting...", end="")
+    client1.connect(broker_addr)
+    print("done.")
 
 def main():
     parser = argparse.ArgumentParser()
@@ -103,6 +135,8 @@ def main():
 
     args = parser.parse_args()
 
+    connectToMQTT()
+    
     o = PorcupineDemo(access_key=args.access_key,
                       device_index=args.audio_device_index,
                       sensitivity=0.6)
