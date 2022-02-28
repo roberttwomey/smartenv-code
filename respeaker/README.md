@@ -21,7 +21,7 @@ This script will listen to the microphone, recognize with google speech, and str
 
 `python speechrecognition_mqtt.py`
 
-the topic is `smartenv/audionode/speech`
+this script publishes to `smartenv/audionode/speech`
 
 __Speech Subscriber in p5__ 
 
