@@ -2,17 +2,20 @@
 code examples for EMAR391 009 Smart Environments SP22
 
 Devices: 
-- [Respeaker](/respeaker) circular and linear mic arrays (4-6 mics)
-- [Coral Board](#google-coral-board) edge inference (mobilenet, yolo, face detection, etc.)
-- [Raspberry Pi](#raspberry-pi) media playback
+- [BLE Sensor Tags](#ble-sensor-tags) event-triggered acceleration, door opening, temperature and humidity
 - [IoT Gateway](#iot-gateway) relaying BLE and other sensor signals
 - [Particle Photon](/particle) wireless IoT board to do sensors and actuators over wifi
-- [BLE Sensor Tags](#ble-sensor-tags) event-triggered acceleration, door opening, temperature and humidity
+- [Respeaker](/respeaker) circular and linear mic arrays (4-6 mics). can also *play* audio with an attached speaker.
+- [Raspberry Pi](#raspberry-pi) media playback controlled by MQTT
+- [Coral Board](#google-coral-board) edge inference (mobilenet, yolo, face detection, etc.)
+- [e-Ink](/eink) electronic ink displays as "quiet" outputs
+- [Robots](/xarm) xArm7 co-robotic arm for posing and replaying action
 
 Languages:
+- [p5](#p5) using p5.js on the web to interact via mqtt messaging
 - [PureData](/puredata) mqtt messaging with puredata
 
-Platforms:
+MQTT Platforms:
 - Shiftr.io for now. We can use the eclipse mqtt server instead.
 
 # Google Coral Board
@@ -33,7 +36,7 @@ Reads BLE advertising packets to parse accelerometer (and other) data. Transmit 
 ## Message Broker
 We are exploring shiftr.io as our mqtt broker. You can view a live visualization of their public broker here: [https://www.shiftr.io/try/](https://www.shiftr.io/try/)
 
-## p5 examples
+# p5
 
 These examples explore sending (publishing), receiving (subscribing) and doing other things with the mqtt messages. They require you to be in a room with the G1 gateway in order to function and transmit data to the cloud.
 

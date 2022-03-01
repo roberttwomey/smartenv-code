@@ -2,10 +2,10 @@
 [TK Overview]
 
 # Setup
-1. Install tge appropriate version of **purr-data** from [here](https://agraef.github.io/purr-data/)
-2. Download a release of `mqtt-client` from [here](https://github.com/njazz/mqtt-client-object/releases/tag/0.0.2)
-3. Unzip the file. Rename the resulting folder to `mqtt-client`. Copy to `~/Library/Pd-l2ork`. Make that folder if it does not exist. 
-4. Start puredata. You should be able to use the mqtt-client. 
+1. Install the appropriate version of **purr-data** from the downloads [link](https://agraef.github.io/purr-data/)
+2. Download a release of the `mqtt-client` object from [here](https://github.com/njazz/mqtt-client-object/releases/tag/0.0.2). This should work on Windws, Mac, Linux, with MaxMSP or Puredata. Choose the appropriate verson for your system.
+3. Unzip the file. Rename the resulting folder to `mqtt-client` (i.e. lose the last parts of the folder name). Copy the file to your externals folder for puredata. On Mac, this is `~/Library/Pd-l2ork`. Make that folder if it does not exist. More info [here](https://puredata.info/docs/faq/how-do-i-install-externals-and-help-files) about installing externals with pd.
+4. Start puredata. You should be able to use the mqtt-client within a patch, or load one of the patches below.
 
 # Patches
 
