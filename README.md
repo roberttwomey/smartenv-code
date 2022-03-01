@@ -12,7 +12,7 @@ Devices:
 Languages:
 - [PureData](/puredata) mqtt messaging with puredata
 
-Platforms:
+MQTT Platforms:
 - Shiftr.io for now. We can use the eclipse mqtt server instead.
 
 # Google Coral Board
