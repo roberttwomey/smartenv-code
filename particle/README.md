@@ -1,6 +1,22 @@
-Wireless IoT microcontroller can operate sensors and actuators.
+![image](https://user-images.githubusercontent.com/1598545/156173775-de7fc8b5-dbc1-44ea-a595-46f8b465a160.png)
+Wireless IoT microcontroller can operate sensors and actuators. [Particle.io](https://www.particle.io/)
+
 # Setup
-Follow particle instructions: [TK]
+Follow particle instructions. Prof. Twomey did this. 
+
+Login to https://build.particle.io/
+
+	1. complete the doctor to reinstall firmware and restore default Tinker app:
+		○ particle device doctor
+	2. hold down setup for 3 seconds to get into listening mode (blue flash)
+	3. particle serial mac - to get MAC address
+	4. register for the NU-IoT network: https://nu-net.nebraska.edu/guest/mac_create.php
+	5. Run wifi config to get it online with the NU-IoT password produced in the device above
+	6. Get the device ID: 
+		 - particle identify
+	7. Claim the device: 
+     - particle device add 2f0026001047343339383037
+
 
 # Programming
 Use Particle Web IDE: https://build.particle.io/
