@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/1598545/156173775-de7fc8b5-dbc1-44ea-a595-46f8b465a160.png)
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/1598545/156173775-de7fc8b5-dbc1-44ea-a595-46f8b465a160.png">
 Wireless IoT microcontroller can operate sensors and actuators. [Particle.io](https://www.particle.io/)
 
 # Setup
