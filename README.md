@@ -5,7 +5,7 @@ Devices:
 - [BLE Sensor Tags](#ble-sensor-tags) event-triggered acceleration, door opening, temperature and humidity
 - [IoT Gateway](#iot-gateway) relaying BLE and other sensor signals
 - [Particle Photon](/particle) wireless IoT board to do sensors and actuators over wifi
-- [Respeaker](/respeaker) circular and linear mic arrays (4-6 mics)
+- [Respeaker](/respeaker) circular and linear mic arrays (4-6 mics). can also *play* audio with an attached speaker.
 - [Raspberry Pi](#raspberry-pi) media playback
 - [Coral Board](#google-coral-board) edge inference (mobilenet, yolo, face detection, etc.)
 - [e-Ink](/eink) electronic ink displays as "quiet" outputs
