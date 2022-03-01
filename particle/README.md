@@ -6,16 +6,16 @@ Follow particle instructions. Prof. Twomey did this.
 
 Login to https://build.particle.io/
 
-	1. complete the doctor to reinstall firmware and restore default Tinker app:
-		○ particle device doctor
-	2. hold down setup for 3 seconds to get into listening mode (blue flash)
-	3. particle serial mac - to get MAC address
-	4. register for the NU-IoT network: https://nu-net.nebraska.edu/guest/mac_create.php
-	5. Run wifi config to get it online with the NU-IoT password produced in the device above
-	6. Get the device ID: 
-		 - particle identify
-	7. Claim the device: 
-     - particle device add 2f0026001047343339383037
+1. complete the doctor to reinstall firmware and restore default Tinker app:
+   - particle device doctor
+3. hold down setup for 3 seconds to get into listening mode (blue flash)
+4. particle serial mac - to get MAC address
+5. register for the NU-IoT network: https://nu-net.nebraska.edu/guest/mac_create.php
+6. Run wifi config to get it online with the NU-IoT password produced in the device above
+7. Get the device ID: 
+   - particle identify
+8. Claim the device: 
+   - particle device add 2f0026001047343339383037
 
 
 # Programming
