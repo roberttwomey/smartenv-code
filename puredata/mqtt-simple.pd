@@ -1,29 +1,21 @@
-#N canvas 494 22 905 745 12;
-#X obj 430 10 mqtt_client;
-#X obj 630 80 print;
-#X obj 576 111 route connected publish_result subscribe;
-#X obj 576 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#N canvas 631 22 809 745 12;
+#X obj 310 10 mqtt_client;
+#X obj 510 80 print;
+#X obj 456 111 route connected publish_result subscribe;
+#X obj 456 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
-#X obj 668 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 548 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
-#X obj 760 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 640 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
-#X msg 270 -180 disconnect;
-#X obj 434 67 list trim;
-#X msg 190 -210 connect public.cloud.shiftr.io pd-client public public
+#X msg 380 -220 disconnect;
+#X obj 310 70 list trim;
+#X msg 360 -250 connect public.cloud.shiftr.io pd-client public public
 ;
-#X msg 60 -130 subscribe smartenv/photon1;
 #X obj 40 180 print smartenv;
-#X symbolatom 680 -180 10 0 0 0 - - -, f 10;
-#X symbolatom 760 -180 10 0 0 0 - - -, f 10;
-#X obj 680 -210 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 440 -80 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 760 -210 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 280 -110 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X msg 280 -80 unsubscribe smartenv/photon1;
-#X obj 60 -160 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 440 -140 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 190 220 unpack s s;
 #X obj 160 150 route smartenv;
@@ -34,7 +26,17 @@
 #X text 30 400 Spring 2022;
 #X text 30 370 rtwomey@unl.edu;
 #X text 250 -300 simple subscribe and publish example with MQTT;
-#X msg 630 -120 publish smartenv/photon1 \$1;
+#X obj 70 -160 symbol;
+#X msg 30 -210 on;
+#X msg 70 -240 off;
+#X msg 120 -240 red;
+#X msg 160 -240 green;
+#X msg 220 -240 blue;
+#X msg 220 -200 white;
+#X text 500 -150 change this name to match your device;
+#X msg 110 -100 publish smartenv/photon1 \$1;
+#X msg 440 -60 unsubscribe smartenv/photon1;
+#X msg 440 -120 subscribe smartenv/photon1;
 #X connect 0 0 7 0;
 #X connect 0 1 1 0;
 #X connect 0 1 2 0;
@@ -42,19 +44,22 @@
 #X connect 2 1 4 0;
 #X connect 2 2 5 0;
 #X connect 6 0 0 0;
-#X connect 7 0 19 0;
+#X connect 7 0 13 0;
 #X connect 8 0 0 0;
-#X connect 9 0 0 0;
-#X connect 11 0 27 0;
-#X connect 12 0 27 0;
-#X connect 13 0 11 0;
-#X connect 14 0 12 0;
-#X connect 15 0 16 0;
-#X connect 16 0 0 0;
-#X connect 17 0 9 0;
-#X connect 18 0 21 0;
-#X connect 18 1 22 0;
-#X connect 19 0 18 0;
-#X connect 19 0 10 0;
-#X connect 19 1 20 0;
-#X connect 27 0 0 0;
+#X connect 10 0 30 0;
+#X connect 11 0 31 0;
+#X connect 12 0 15 0;
+#X connect 12 1 16 0;
+#X connect 13 0 12 0;
+#X connect 13 0 9 0;
+#X connect 13 1 14 0;
+#X connect 21 0 29 0;
+#X connect 22 0 21 0;
+#X connect 23 0 21 0;
+#X connect 24 0 21 0;
+#X connect 25 0 21 0;
+#X connect 26 0 21 0;
+#X connect 27 0 21 0;
+#X connect 29 0 0 0;
+#X connect 30 0 0 0;
+#X connect 31 0 0 0;
