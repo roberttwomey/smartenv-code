@@ -6,7 +6,7 @@ We are using the Particle [Photon](https://docs.particle.io/photon/), their WiFi
 
 
 # Setup
-Follow particle instructions. Prof. Twomey did this. 
+You should not need to do this. I have pre-programmed these to work with MQTT, so they are running "firmware" (no need to change it). These instructions are for reference.
 
 Login to https://build.particle.io/ with your particle account.
 
