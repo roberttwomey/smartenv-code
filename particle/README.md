@@ -4,22 +4,32 @@ Wireless IoT microcontroller that can operate sensors and actuators. [Particle.i
 # Setup
 Follow particle instructions. Prof. Twomey did this. 
 
-Login to https://build.particle.io/
+Login to https://build.particle.io/ with your particle account.
 
 1. complete the doctor to reinstall firmware and restore default Tinker app:
-   - particle device doctor
-3. hold down setup for 3 seconds to get into listening mode (blue flash)
-4. particle serial mac - to get MAC address
-5. register for the NU-IoT network: https://nu-net.nebraska.edu/guest/mac_create.php
-6. Run wifi config to get it online with the NU-IoT password produced in the device above
-7. Get the device ID: 
+   - `particle device doctor`
+   - you can select the WiFi network, and put in a dummy password. 
+2. hold down setup for 3 seconds to get into listening mode (blue flash)
+3. to get MAC address:
+   - `particle serial mac`
+4. register for the NU-IoT network: https://nu-net.nebraska.edu/guest/mac_create.php
+5. Run wifi config:
+   - `particle serial wifi`
+   - Yes scan
+   - NU-IoT
+   - Yes detect security
+   - enter the password from the IoT registration above
+6. Get the device ID: 
    - particle identify
-8. Claim the device: 
+7. Claim the device: 
    - particle device add 2f0026001047343339383037
-
+8. It should now show up in your console: https://console.particle.io/devices/
 
 # Programming
-Use Particle Web IDE: https://build.particle.io/
+
+The particle devices are a lot like arduinos, except you can program and flash them over the internet. Use Particle Web IDE to write new code: https://build.particle.io/
+
+I have preprogrammed these to interact via MQTT (same as our BLE tags), so you won't need to reprogram for basic stuff.
 
 # Examples
 
