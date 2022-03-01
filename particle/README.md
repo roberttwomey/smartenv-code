@@ -1,5 +1,5 @@
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/1598545/156173775-de7fc8b5-dbc1-44ea-a595-46f8b465a160.png">
-Wireless IoT microcontroller can operate sensors and actuators. [Particle.io](https://www.particle.io/)
+Wireless IoT microcontroller that can operate sensors and actuators. [Particle.io](https://www.particle.io/)
 
 # Setup
 Follow particle instructions. Prof. Twomey did this. 
@@ -23,7 +23,7 @@ Use Particle Web IDE: https://build.particle.io/
 
 # Examples
 
-## mqttRelay
+## Electroechanical Relay
 
 Source code link: https://go.particle.io/shared_apps/621c4137366a9b0009b32c69
 
@@ -47,3 +47,6 @@ Indicator light:
 - `blue` turns indicator LED blue
 - `green` turns indicator LED green
 - `white` (or anything that is not the above 5 commands) turns the indicator LED white
+
+## Servo
+Moving a motor.
