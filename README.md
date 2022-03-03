@@ -1,6 +1,10 @@
 # smartenv-code
 code examples for EMAR391 009 Smart Environments SP22
 
+Interfaces:
+- [p5](#p5) using p5.js on the web to interact via mqtt messaging
+- [PureData](/puredata) mqtt messaging with puredata
+
 Devices: 
 - [BLE Sensor Tags](#ble-sensor-tags) event-triggered acceleration, door opening, temperature and humidity
 - [IoT Gateway](#iot-gateway) relaying BLE and other sensor signals
@@ -10,10 +14,6 @@ Devices:
 - [Coral Board](#google-coral-board) edge inference (mobilenet, yolo, face detection, etc.)
 - [e-Ink](/eink) electronic ink displays as "quiet" outputs
 - [Robots](/xarm) xArm7 co-robotic arm for posing and replaying action
-
-Languages:
-- [p5](#p5) using p5.js on the web to interact via mqtt messaging
-- [PureData](/puredata) mqtt messaging with puredata
 
 MQTT Platforms:
 - Shiftr.io for now. We can use the eclipse mqtt server instead.
