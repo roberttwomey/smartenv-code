@@ -75,5 +75,5 @@ Movement:
 - `left` moves all the way to the left
 - `right` moves all the way to the right
 - `move 90` moves some number of degrees. change 90 to whatever rotation you want.
-  - <img width="600" alt="image" src="https://user-images.githubusercontent.com/1598545/156586160-6f1f3942-6fbd-4c16-bf6e-1b45f83a6826.png">
+  - <img width="343" alt="image" src="https://user-images.githubusercontent.com/1598545/156586268-740806c5-921d-49a4-82d7-191d70edc8a1.png">
 
