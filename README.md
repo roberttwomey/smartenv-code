@@ -40,7 +40,7 @@ We are exploring shiftr.io as our mqtt broker. You can view a live visualization
 
 These examples explore sending (publishing), receiving (subscribing) and doing other things with the mqtt messages. They require you to be in a room with the G1 gateway in order to function and transmit data to the cloud.
 
-<img width="316" alt="image" src="https://user-images.githubusercontent.com/1598545/156566127-62dd7a3d-a08a-4563-b14e-dc63cf242711.png">
+<img width="638" alt="image" src="https://user-images.githubusercontent.com/1598545/156566203-1ebb0f9d-8086-47fa-b5db-3a27fc943496.png">
 
 [mqttPublisher sketch](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) ([code](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS))
 
