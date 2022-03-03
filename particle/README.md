@@ -65,3 +65,15 @@ Indicator light:
 
 ## Servo
 Moving a motor.
+
+__Topic__: `/smartenv/photon6` (choose the correct number for your device)
+
+__Messages__
+
+Movement:
+- (servo attached to pin D0)
+- `left` moves all the way to the left
+- `right` moves all the way to the right
+- `move 90` moves some number of degrees. change 90 to whatever rotation you want.
+  - <img width="600" alt="image" src="https://user-images.githubusercontent.com/1598545/156586160-6f1f3942-6fbd-4c16-bf6e-1b45f83a6826.png">
+
