@@ -50,6 +50,8 @@ Use the G1 Iot gateway to read tags. Work with accelerometer data.
   - (uses sliders to simluate accelerometers)
 - tagSubscriber_bargraph: https://editor.p5js.org/robert.twomey/sketches/dA6aKcBpu9 
   - (receives data and displays accelerometer as a bar graph)
+- tagSubscriber_conditional: https://editor.p5js.org/robert.twomey/sketches/rPfv9jPlM
+  - (uses if statements to decide which edge the tag is oriented on) 
 - tagSubscriber_teapot: https://editor.p5js.org/robert.twomey/sketches/cA0f-c5y0
   - (receives data and uses accelerometer to rotate teapot)
 
