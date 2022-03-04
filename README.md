@@ -1,11 +1,11 @@
 # smartenv-code
 code examples for EMAR391 009 Smart Environments SP22
 
-Interfaces:
+Software:
 - [p5](#p5) using p5.js on the web to interact via mqtt messaging
 - [PureData](/puredata) mqtt messaging with puredata
 
-Devices: 
+Hardware: 
 - [BLE Sensor Tags](#ble-sensor-tags) event-triggered acceleration, door opening, temperature and humidity
 - [IoT Gateway](#iot-gateway) relaying BLE and other sensor signals
 - [Particle Photon](/particle) wireless IoT board to do sensors and actuators over wifi
