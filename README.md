@@ -40,9 +40,9 @@ We are exploring shiftr.io as our mqtt broker. You can view a live visualization
 
 These examples explore sending (publishing), receiving (subscribing) and doing other things with the mqtt messages. They require you to be in a room with the G1 gateway in order to function and transmit data to the cloud.
 
+### Simple Message Publishing
 <img width="638" alt="image" src="https://user-images.githubusercontent.com/1598545/156566203-1ebb0f9d-8086-47fa-b5db-3a27fc943496.png">
 
-### Simple Message Publishing
 This sketch lets you type in an address ("topic"), and send a message. It is great for testing things out:
 [mqttPublisher sketch](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) ([code](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS))
 
