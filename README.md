@@ -63,7 +63,7 @@ Move a teapot:
   - (receives data and uses accelerometer to rotate teapot. the 3DOF accel to pitch/roll is somewhat buggy, so this is inexact)
 
 Use the tag to trigger events: 
-- tagSubscriber_trigger: https://editor.p5js.org/robert.twomey/sketches/xkJdYH3ks
+- tag_triggered_relay: https://editor.p5js.org/robert.twomey/sketches/EPNmEcFlJ
   - (triggers an action everytime the tag is moved. resets after some interval)
 - tag_triggerd_video: https://editor.p5js.org/robert.twomey/sketches/W8ZmOREYX
   - (**play video** when tag moves)
