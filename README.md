@@ -59,7 +59,8 @@ Use the G1 Iot gateway to read tags. Work with accelerometer data.
   - (receives data and uses accelerometer to rotate teapot. the 3DOF accel to pitch/roll is somewhat buggy, so this is inexact)
 - tagSubscriber_trigger: https://editor.p5js.org/robert.twomey/sketches/xkJdYH3ks
   - (triggers an action everytime the tag is moved. resets after some interval)
-  - **play video** when tag moves https://editor.p5js.org/robert.twomey/sketches/W8ZmOREYX
+- tag_triggerd_video: https://editor.p5js.org/robert.twomey/sketches/W8ZmOREYX
+  - (**play video** when tag moves)
 
 ### S1 Temperature/Humidity
 - tempSubscriber_mqtt: https://editor.p5js.org/robert.twomey/sketches/z4lshxu06
