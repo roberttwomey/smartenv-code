@@ -1,3 +1,7 @@
+- [Relay](#relay)
+- [Servo](#servo)
+
+
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/1598545/156173775-de7fc8b5-dbc1-44ea-a595-46f8b465a160.png">
 
 [Particle.io](https://www.particle.io/) makes wireless IoT microcontroller that can operate sensors and actuators. 
@@ -38,7 +42,7 @@ I have preprogrammed these to interact via MQTT (same as our BLE tags), so you w
 
 # Examples
 
-## Electroechanical Relay
+## Relay
 
 Source code link: https://go.particle.io/shared_apps/621c4137366a9b0009b32c69
 
