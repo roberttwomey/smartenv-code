@@ -26,9 +26,9 @@ To run the script on the pi:
 Publishes to `/smartenv/respeaker/speech`
 
 ### Speech Subscriber p5
+This sketch subscribes to the respeaker and listens for recognition results:
 
-- [speechSubscriber_mqtt](https://editor.p5js.org/robert.twomey/full/9rzxlO4Qs) and [code](https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs)
-  - (mqtt subscriber that listens for recognized speech)
+[speechSubscriber_mqtt](https://editor.p5js.org/robert.twomey/full/9rzxlO4Qs) ([code](https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs))
 
 ## Indicator Lights
 Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) ([code](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS)) to control the light ring.
