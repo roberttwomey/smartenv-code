@@ -51,6 +51,48 @@ Example adapted from [respeaker pixel_ring examples](https://github.com/respeake
 ## Wakeword Detection
 [Not yet implemented]
 
+# Setup
+## setup respeaker 
+
+__NOTE__: this only runs on raspbian 32bit right now. 
+
+from https://wiki.seeedstudio.com/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/
+
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh   
+sudo reboot![image](https://user-images.githubusercontent.com/1598545/157467811-9dda23a6-aa8a-4250-bfe5-42909e9806ae.png)
+
+## setup speech_recognition
+(multi-platform)
+
+packages: 
+```
+sudo apt-get install flac
+sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev libgconf-2-4
+sudo apt-get install libportaudio2
+```
+
+python modules:
+```
+pip instal pyaudio
+pip install SpeechRecognition
+pip install paho-mqtt
+```
+
+## install this code
+```
+git clone https://github.com/roberttwomey/smartenv-code
+```
+
+run the recognizer:
+```
+cd ~/smartenv-code/respeaker
+python speechrecognition_mqtt.py
+```
+
 # References
 - speechrecognition source code: https://github.com/Uberi/speech_recognition
   - pypi page: https://pypi.org/project/SpeechRecognition/
