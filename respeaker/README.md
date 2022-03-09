@@ -1,4 +1,4 @@
-# Examples for the Respeaker 6-Microphone Array
+# Respeaker 6-Microphone Array
 <img src="https://user-images.githubusercontent.com/1598545/157468792-177624b7-5c33-4fd7-a845-4401881f29e2.png" width=600>
 
 Capabilities:
