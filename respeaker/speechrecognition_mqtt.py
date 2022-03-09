@@ -10,6 +10,9 @@
 
 import speech_recognition as sr
 import paho.mqtt.client as paho
+from datetime import datetime
+from uuid import getnode as get_mac
+import json
 
 # speech recognition  
 r = sr.Recognizer()
@@ -24,13 +27,24 @@ def on_connect():
     print("connected...")
     pass
 
+def create_json(text):
+    this_time = datetime.now()
+    timestamp = this_time.isoformat()+"Z"
+    msg = {
+        "timestamp": timestamp,
+        #"type": "speech",
+        #"mac": my_mac,
+        "text": text}
+    return json.dumps(msg)
+        
+    
 client1 = None
 
 clientName = "smartenv"
 broker_addr= "public.cloud.shiftr.io"
 #broker_addr= "34.77.13.55"
 broker_port = 443 # ignored, https not working right now
-topic = "smartenv/audionode/speech"
+topic = "smartenv/audionode1/speech"
 mqtt_user = "public"
 mqtt_password = "public"
 
@@ -42,6 +56,10 @@ print("connecting...", end="")
 client1.connect(broker_addr)
 print("done.")
 
+# mac address
+mac = get_mac()
+my_mac = upper(hex(mac))
+print("my mac is:" + my_mac)
 
 try:
     print("A moment of silence, please...")
@@ -60,10 +78,11 @@ try:
                 print(u"You said {}".format(value).encode("utf-8"))
             else:  # this version of Python uses unicode for strings (Python 3+)
                 print("You said {}".format(value))
+                msg = create_json(value)
                 
                 # publish to mqtt
-                ret = client1.publish(topic, value)
-                print("published {} to mqtt \"{}\"".format(topic, value))
+                ret = client1.publish(topic, message)
+                print("published {} to mqtt \"{}\"".format(topic, message))
                 
         except sr.UnknownValueError:
             print("Oops! Didn't catch that")
