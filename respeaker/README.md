@@ -23,7 +23,7 @@ This script will listen to the microphone, recognize anything it hears, and send
 To run the script on the pi: 
 `python speechrecognition_mqtt.py`
 
-Publishes to `smartenv/speech`
+Publishes to `/smartenv/respeaker/speech`
 
 ### Speech Subscriber p5
 
@@ -33,7 +33,7 @@ Publishes to `smartenv/speech`
 ## Indicator Lights
 Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS) example to control the light ring.
 
-MQTT Topic: `/smartenv/audionode`
+Subscribes to topic: `/smartenv/respeaker/lights`
 
 Control Messages:
   - `/smartenv/audionode` with value `wake`
