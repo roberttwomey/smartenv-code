@@ -30,6 +30,11 @@ This sketch subscribes to the respeaker and listens for recognition results:
 
 [speechSubscriber_mqtt](https://editor.p5js.org/robert.twomey/full/9rzxlO4Qs) ([code](https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs))
 
+### Speech Keyword p5
+Sketch that detects keywords, and changes an image depending on what it heard.
+
+[speech_keyword](https://editor.p5js.org/robert.twomey/sketches/R31baBcqH)
+
 ## Indicator Lights
 Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) ([code](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS)) to control the light ring.
 
