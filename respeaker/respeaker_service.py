@@ -19,10 +19,6 @@ from pixel_ring import pixel_ring
 from gpiozero import LED
 
 
-# speech recognition  
-r = sr.Recognizer()
-m = sr.Microphone()
-
 # -------- mqtt helpers --------
 def on_publish(client, userdata, result):
     print("published: "+str(userdata))
@@ -104,8 +100,6 @@ mqttClient.connect(broker_addr)
 print("done.")
 mqttClient.loop_start()
 
-
-
 # -------- globals ---------
 # mac address
 mac = get_mac()
@@ -114,6 +108,18 @@ print("my mac is:" + my_mac)
 
 publishTopic = "/smartenv/respeaker/speech"
 subscribeTopic = "/smartenv/respeaker/lights"
+
+# -------- start leds --------
+pixel_ring.set_brightness(10)
+pixel_ring.change_pattern("smartenv")
+pixel_ring.wakeup()
+
+time.sleep(5)
+
+# -------- start audio --------
+# speech recognition  
+r = sr.Recognizer()
+m = sr.Microphone()
 
 
 # -------- main program ---------
