@@ -27,7 +27,7 @@ Publishes to `smartenv/speech`
 
 ### Speech Subscriber p5
 
-- speechSubscriber_mqtt: https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs
+- [speechSubscriber_mqtt](https://editor.p5js.org/robert.twomey/full/9rzxlO4Qs) and [code](https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs)
   - (mqtt subscriber that listens for recognized speech)
 
 ## Indicator Lights
