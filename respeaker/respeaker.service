@@ -1,0 +1,11 @@
+[Unit]
+Description=respeaker
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/smartenv-code/respeaker/respeaker_service.py
+Restart=always
+User=pi
+
+[Install]
+WantedBy=default.target
