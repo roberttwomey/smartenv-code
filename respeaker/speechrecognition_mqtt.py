@@ -34,8 +34,10 @@ def create_json(text):
         "timestamp": timestamp,
         #"type": "speech",
         #"mac": my_mac,
-        "text": text}
-    return json.dumps(msg)
+        "text": text
+    } 
+    return "["+json.dumps(msg)+"]"
+    #return json.dumps(msg)
         
     
 client1 = None
@@ -44,7 +46,7 @@ clientName = "smartenv"
 broker_addr= "public.cloud.shiftr.io"
 #broker_addr= "34.77.13.55"
 broker_port = 443 # ignored, https not working right now
-topic = "smartenv/audionode1/speech"
+topic = "smartenv/speech"
 mqtt_user = "public"
 mqtt_password = "public"
 
@@ -78,7 +80,7 @@ try:
                 print(u"You said {}".format(value).encode("utf-8"))
             else:  # this version of Python uses unicode for strings (Python 3+)
                 print("You said {}".format(value))
-                msg = create_json(value)
+                message = create_json(value)
                 
                 # publish to mqtt
                 ret = client1.publish(topic, message)
