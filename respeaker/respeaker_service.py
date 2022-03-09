@@ -122,25 +122,26 @@ try:
     power = LED(5)
     power.on()
     pixel_ring.set_brightness(10)
+    pixel_ring.change_pattern("smartenv")
     
     print("A moment of silence, please...")
     with m as source: r.adjust_for_ambient_noise(source)
     print("Set minimum energy threshold to {}".format(r.energy_threshold))
     while True:
-        print("Say something!")
+        # print("listening.", end=" ")
         
         # listening
-        pixel_ring.wakeup()
+        pixel_ring.listen()
         # pixel_ring.set_color(r=255, g=0, b=0)
-        time.sleep(0.1)
+        # time.sleep(0.1)
 
         with m as source: audio = r.listen(source)
-        print("Got it! Now to recognize it...")
+        # print("recognizing.", end=" ")
 
         # thinking
         pixel_ring.think()
         # pixel_ring.set_color(r=255, g=0, b=128)
-        time.sleep(0.1)
+        # time.sleep(0.1)
 
         try:
             # recognize speech using Google Speech Recognition
@@ -148,19 +149,21 @@ try:
 
             # we need some special handling here to correctly print unicode characters to standard output
             if str is bytes:  # this version of Python uses bytes for strings (Python 2)
-                print(u"You said {}".format(value).encode("utf-8"))
+                print(u"heard: {}".format(value).encode("utf-8"))
             else:  # this version of Python uses unicode for strings (Python 3+)
-                print("You said {}".format(value))
+                print("heard: {}".format(value))
                 message = create_json(value)
                 
                 # publish to mqtt
                 ret = mqttClient.publish(publishTopic, message)
-                print("published {} to mqtt \"{}\"".format(publishTopic, message))
+                print("published to {}: {}".format(publishTopic, message))
+                pixel_ring.set_color(r=255, g=0, b=0)
+                time.sleep(0.1)
                 
         except sr.UnknownValueError:
-            print("Oops! Didn't catch that")
+            print("no results.")
         except sr.RequestError as e:
-            print("Uh oh! Couldn't request results from Google Speech Recognition service; {0}".format(e))
+            print("Couldn't request results from Google Speech Recognition service; {0}".format(e))
 except KeyboardInterrupt:
     print("exiting")
     pixel_ring.off()
