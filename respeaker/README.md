@@ -24,7 +24,7 @@ To run the script on the pi:
 
 Publishes to `smartenv/audionode/speech`
 
-__Speech Subscriber in p5__ 
+### Speech Subscriber p5
 
 - speechSubscriber_mqtt: https://editor.p5js.org/robert.twomey/sketches/9rzxlO4Qs
   - (mqtt subscriber that listens for recognized speech)
