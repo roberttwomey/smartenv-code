@@ -3,6 +3,7 @@
 
 Capabilities:
 - [Speech Recognition](#speech-recognition) - listening for audio and transcribing it / pushing it to shiftr
+  - [speechSubscriber p5](#speech-subscriber-p5)
 - [Indicator Lights](#indicator-lights) - controlling the indicator lights / pixel ring on the respeaker
 - Wake Word Detection
 - Direction of Arrival (DOA) — where did sound come from
