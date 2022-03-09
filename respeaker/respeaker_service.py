@@ -66,12 +66,15 @@ def messageDecoder(client, userdata, msg):
         time.sleep(0.1)
     elif message == "off":
         pixel_ring.off()
-        time.sleep(3)
+        time.sleep(0.1)
     elif message == "echo":
         pixel_ring.change_pattern('echo')
         time.sleep(0.1)
     elif message == 'google':
         pixel_ring.change_pattern('google')
+        time.sleep(0.1)
+    elif message == 'smartenv':
+        pixel_ring.change_pattern('smartenv')
         time.sleep(0.1)
     elif message.startswith("color"):
         r, g, b = message.split(" ")[1:]
