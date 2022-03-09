@@ -31,7 +31,7 @@ Publishes to `/smartenv/respeaker/speech`
   - (mqtt subscriber that listens for recognized speech)
 
 ## Indicator Lights
-Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS) example to control the light ring.
+Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) ([code](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS)) to control the light ring.
 
 Subscribes to topic: `/smartenv/respeaker/lights`
 
