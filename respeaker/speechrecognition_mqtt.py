@@ -58,7 +58,7 @@ print("done.")
 
 # mac address
 mac = get_mac()
-my_mac = upper(hex(mac))
+my_mac = hex(mac).upper()
 print("my mac is:" + my_mac)
 
 try:
