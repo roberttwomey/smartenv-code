@@ -56,7 +56,7 @@ def messageDecoder(client, userdata, msg):
         pixel_ring.wakeup()
         time.sleep(0.1)
     elif message == "listen":
-        pixel_ring.wakeup()
+        pixel_ring.listen()
         time.sleep(0.1)
     elif message == "think":
         pixel_ring.think()
