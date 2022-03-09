@@ -54,8 +54,7 @@ Example adapted from [respeaker pixel_ring examples](https://github.com/respeake
 # Setup
 
 __Install Respeaker__
-
-__NOTE__: this only runs on raspbian 32bit right now. 
+(NOTE: this only runs on raspbian 32bit right now ca. March 2022)
 
 from https://wiki.seeedstudio.com/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/
 
