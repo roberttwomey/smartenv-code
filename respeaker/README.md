@@ -23,7 +23,7 @@ This script will listen to the microphone, recognize anything it hears, and send
 To run the script on the pi: 
 `python speechrecognition_mqtt.py`
 
-Publishes to `smartenv/audionode/speech`
+Publishes to `smartenv/speech`
 
 ### Speech Subscriber p5
 
