@@ -36,12 +36,13 @@ Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS)
 Subscribes to topic: `/smartenv/respeaker/lights`
 
 Control Messages:
-  - `/smartenv/audionode` with value `wake`
+  - `/smartenv/respeaker/lights` with value `wake`
     - <img width="600" alt="image" src="https://user-images.githubusercontent.com/1598545/155911682-2b705b31-fd37-4f91-b8c5-f247b3f44e58.png">
-  - `/smartenv/audionode` with value `think`
-  - `/smartenv/audionode` with value `sleep`
-  - `/smartenv/audionode` with value `off`
-  - `/smartenv/audionode` with value `color R G B`
+  - `/smartenv/respeaker/lights` with value `listen`
+  - `/smartenv/respeaker/lights` with value `think`
+  - `/smartenv/respeaker/lights` with value `sleep`
+  - `/smartenv/respeaker/lights` with value `off`
+  - `/smartenv/respeaker/lights` with value `color R G B` where you specify Red, Green, and Blue as 0-255 integers
     - <img width="369" alt="image" src="https://user-images.githubusercontent.com/1598545/155913062-76b7b920-d800-406c-818c-178ca0fb44b7.png">
 
 
