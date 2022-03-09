@@ -52,21 +52,24 @@ Example adapted from [respeaker pixel_ring examples](https://github.com/respeake
 [Not yet implemented]
 
 # Setup
-## setup respeaker 
+
+__Install Respeaker__
 
 __NOTE__: this only runs on raspbian 32bit right now. 
 
 from https://wiki.seeedstudio.com/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/
 
+```
 sudo apt-get update
 sudo apt-get upgrade
 git clone https://github.com/respeaker/seeed-voicecard.git
 cd seeed-voicecard
 sudo ./install.sh   
-sudo reboot![image](https://user-images.githubusercontent.com/1598545/157467811-9dda23a6-aa8a-4250-bfe5-42909e9806ae.png)
+sudo reboot
+```
 
-## setup speech_recognition
-(multi-platform)
+__Install pypi SpeechRecognition__
+(multi-platform, defaults to google voice services, for free!)
 
 packages: 
 ```
@@ -82,7 +85,7 @@ pip install SpeechRecognition
 pip install paho-mqtt
 ```
 
-## install this code
+__install this code__
 ```
 git clone https://github.com/roberttwomey/smartenv-code
 ```
