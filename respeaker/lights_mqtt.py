@@ -11,14 +11,12 @@
 """
 
 import time
-
 from pixel_ring import pixel_ring
 from gpiozero import LED
 
 # LED
 power = LED(5)
 power.on()
-
 pixel_ring.set_brightness(10)
 
 # mqtt

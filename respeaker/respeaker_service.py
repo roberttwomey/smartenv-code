@@ -125,6 +125,7 @@ try:
         
         # listening
         pixel_ring.wakeup()
+        # pixel_ring.set_color(r=255, g=0, b=0)
         time.sleep(0.1)
 
         with m as source: audio = r.listen(source)
@@ -132,6 +133,7 @@ try:
 
         # thinking
         pixel_ring.think()
+        # pixel_ring.set_color(r=255, g=0, b=128)
         time.sleep(0.1)
 
         try:
