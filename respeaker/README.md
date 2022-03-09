@@ -37,7 +37,6 @@ Subscribes to topic: `/smartenv/respeaker/lights`
 
 Control Messages:
   - `/smartenv/respeaker/lights` with value `wake`
-    - <img width="600" alt="image" src="https://user-images.githubusercontent.com/1598545/155911682-2b705b31-fd37-4f91-b8c5-f247b3f44e58.png">
   - `/smartenv/respeaker/lights` with value `listen`
   - `/smartenv/respeaker/lights` with value `think`
   - `/smartenv/respeaker/lights` with value `sleep`
