@@ -89,10 +89,10 @@ __Install this code__
 git clone https://github.com/roberttwomey/smartenv-code
 ```
 
-run the recognizer:
+run the respeaker service (lights and speech rec):
 ```
 cd ~/smartenv-code/respeaker
-python speechrecognition_mqtt.py
+python respeaker_service.py
 ```
 
 # References
