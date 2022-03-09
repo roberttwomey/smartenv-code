@@ -84,7 +84,7 @@ pip install SpeechRecognition
 pip install paho-mqtt
 ```
 
-__install this code__
+__Install this code__
 ```
 git clone https://github.com/roberttwomey/smartenv-code
 ```
