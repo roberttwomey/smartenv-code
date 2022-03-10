@@ -35,6 +35,11 @@ Sketch that detects keywords, and changes an image depending on what it heard.
 
 [speech_keyword](https://editor.p5js.org/robert.twomey/sketches/R31baBcqH)
 
+### Browser Speech Test p5
+Uses your browser's web speech interface to simulate responses from the respeaker.
+
+[browser_speech_mqtt](https://editor.p5js.org/robert.twomey/sketches/2whB_as1H)
+
 ## Indicator Lights
 Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) ([code](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS)) to control the light ring.
 
