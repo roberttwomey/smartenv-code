@@ -15,8 +15,8 @@ Hardware:
 - [e-Ink](/eink) electronic ink displays as "quiet" outputs
 - [Robots](/xarm) xArm7 co-robotic arm for posing and replaying action
 
-MQTT Platforms:
-- Shiftr.io for now. We can use the eclipse mqtt server instead.
+[MQTT](https://mqtt.org/) Platforms:
+- We are exploring [shiftr.io](https://www.shiftr.io/try/) as our mqtt broker. We can use the eclipse mqtt server instead. You can view a live visualization of their public broker here: https://www.shiftr.io/try/. 
 
 # Google Coral Board
 AI inference at the edge. Computer vision and speech recognition. 
@@ -29,6 +29,7 @@ Reading BLE esensor tags and streaming data to MQTT broker or other cloud system
 
 # BLE Sensor Tags
 
+
 ## RPI as IoT Gatweay
 Reads BLE advertising packets to parse accelerometer (and other) data. Transmit these to a mqtt broker (shiftr.io). Runs as a service on the Raspbery Pi.
 - see files here [ble/](ble)
@@ -36,7 +37,7 @@ Reads BLE advertising packets to parse accelerometer (and other) data. Transmit 
 ## Message Broker
 We are exploring shiftr.io as our mqtt broker. You can view a live visualization of their public broker here: [https://www.shiftr.io/try/](https://www.shiftr.io/try/)
 
-# p5
+## p5
 
 These examples explore sending (publishing), receiving (subscribing) and doing other things with the mqtt messages. They require you to be in a room with the G1 gateway in order to function and transmit data to the cloud.
 
