@@ -21,9 +21,9 @@ import socket
 
 # myhostname = socket.gethostname()
 
-clientName = "smartenv-pi"
-publishTopic = "/smartenv/respeaker/speech"
-subscribeTopic = "/smartenv/respeaker/lights"
+clientName = "smartenv2-pi"
+publishTopic = "/smartenv/respeaker2/speech"
+subscribeTopic = "/smartenv/respeaker2/lights"
 bDoListen = True
 
 # -------- mqtt helpers --------
@@ -51,6 +51,7 @@ def create_json(text):
     #return json.dumps(msg)
       
 def messageDecoder(client, userdata, msg):
+    global bDoListen
     message = msg.payload.decode(encoding='UTF-8')
     
     # Feel free to remove the print, but confirmation in the terminal is nice.
@@ -71,6 +72,8 @@ def messageDecoder(client, userdata, msg):
     elif message == "off":
         pixel_ring.off()
         time.sleep(0.1)
+    elif message == "mute":
+        pixel_ring.set_color(r=0, g=0, b=128)
         bDoListen = False
     elif message == "echo":
         pixel_ring.change_pattern('echo')
@@ -139,19 +142,24 @@ try:
     while True:
         # print("listening.", end=" ")
         
-        if bDoListen:
+        if bDoListen == True:
+
             # listening
             pixel_ring.listen()
             # pixel_ring.set_color(r=255, g=0, b=0)
             # time.sleep(0.1)
 
             with m as source: audio = r.listen(source)
-            # print("recognizing.", end=" ")
+            if bDoListen == False:
+                continue
 
             # thinking
             pixel_ring.think()
             # pixel_ring.set_color(r=255, g=0, b=128)
             # time.sleep(0.1)
+
+            if bDoListen == False:
+                continue
 
             try:
                 # recognize speech using Google Speech Recognition
@@ -167,8 +175,8 @@ try:
                     # publish to mqtt
                     ret = mqttClient.publish(publishTopic, message)
                     print("published to {}: {}".format(publishTopic, message))
-                    pixel_ring.set_color(r=255, g=0, b=0)
-                    time.sleep(0.1)
+                    pixel_ring.set_color(r=255, g=0, b=0) # flash red
+                    time.sleep(0.25)
 
             except sr.UnknownValueError:
                 print("no results.")
