@@ -55,6 +55,9 @@ Subscribes to topic: `/smartenv/respeaker/lights`
 Control Messages:
   - `/smartenv/respeaker/lights` with value `wake`
   - `/smartenv/respeaker/lights` with value `listen`
+    - changes to the "listen" pattern. also unmutes the microphone
+  - `/smartenv/respeaker/lights` with the value `mute`
+    - changes to the "muted" pattern (blue). also mutes the microphone and stops listening/transcribing.   
   - `/smartenv/respeaker/lights` with value `think`
   - `/smartenv/respeaker/lights` with value `sleep`
   - `/smartenv/respeaker/lights` with value `off`
