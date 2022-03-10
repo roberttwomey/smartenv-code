@@ -18,8 +18,7 @@ Capabilities:
 4. Receive the speech in p5 and use it to do something. See the examples below.
 5. If the system seems to stop responding, restart the software. Type: `sudo systemctl restart respeaker`.
 
-Notes: 
-- While the system is running, you can publish the MQTT messages below to turn lights on and off, mute, listen, etc: [mqtt controls](#indicator-lights)
+Note: While the system is running, you can publish the MQTT messages below to turn lights on and off, mute, listen, etc: [mqtt controls](#indicator-lights)
 
 # Capabilities
 
