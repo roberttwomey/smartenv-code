@@ -9,7 +9,7 @@ Capabilities:
 - Direction of Arrival (DOA) — where did sound come from
 - ODAS (Open embeddeD Audition System) https://github.com/introlab/odas
 
-# Usage
+# Getting Started
 
 1. Setup. Connect the raspberry pi to power (USB-C), HDMI (to see what's on screen), and a keyboard (so you can type commands)
 2. Start the respeaker. At the prompt `pi@smartenv1:~ $` type: 
