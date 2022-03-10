@@ -9,11 +9,15 @@ Capabilities:
 - Direction of Arrival (DOA) — where did sound come from
 - ODAS (Open embeddeD Audition System) https://github.com/introlab/odas
 
-# Setup
+# Usage
 
-[details to come]
+1. Setup. Connect the raspberry pi to power (USB-C), HDMI (to see what's on screen), and a keyboard (so you can type commands)
+2. Start the respeaker. At the prompt `pi@smartenv1:~ $` type: 
+   - `sudo systemctl start respeaker`
+3. You should see the green lights turn on. When you talk, the device is listening. When you finish talking the lights will dim (while it thinks) and then briefly flash red when it transmits the speech result to mqtt. 
+4. Receive the speech in p5 and use it to do something. See the examples below.
 
-# Use
+# Capabilities
 
 ## Speech Recognition
 The best solution I have found is the [speechrecognition](https://pypi.org/project/SpeechRecognition/) package, which uses google speech services by default.
@@ -61,7 +65,7 @@ Example adapted from [respeaker pixel_ring examples](https://github.com/respeake
 ## Wakeword Detection
 [Not yet implemented]
 
-# Setup
+# Software Install
 
 __Install Respeaker__
 (NOTE: this only runs on raspbian 32bit right now ca. March 2022)
