@@ -17,7 +17,14 @@ import json
 import time
 from pixel_ring import pixel_ring
 from gpiozero import LED
+import socket
 
+# myhostname = socket.gethostname()
+
+clientName = "smartenv-pi"
+publishTopic = "/smartenv/respeaker/speech"
+subscribeTopic = "/smartenv/respeaker/lights"
+bDoListen = True
 
 # -------- mqtt helpers --------
 def on_publish(client, userdata, result):
@@ -47,13 +54,14 @@ def messageDecoder(client, userdata, msg):
     message = msg.payload.decode(encoding='UTF-8')
     
     # Feel free to remove the print, but confirmation in the terminal is nice.
-    print("^^^ payload message = ", message)
+    print("received: ", message)
     if message == "wake":
         pixel_ring.wakeup()
         time.sleep(0.1)
     elif message == "listen":
         pixel_ring.listen()
         time.sleep(0.1)
+        bDoListen = True
     elif message == "think":
         pixel_ring.think()
         time.sleep(0.1)
@@ -63,6 +71,7 @@ def messageDecoder(client, userdata, msg):
     elif message == "off":
         pixel_ring.off()
         time.sleep(0.1)
+        bDoListen = False
     elif message == "echo":
         pixel_ring.change_pattern('echo')
         time.sleep(0.1)
@@ -80,9 +89,7 @@ def messageDecoder(client, userdata, msg):
 
 # -------- initialize MQTT --------
     
-client1 = None
-
-clientName = "smartenv-pi"
+mqttClient = None
 broker_addr= "public.cloud.shiftr.io"
 #broker_addr= "34.77.13.55"
 #broker_port = 443 # ignored, https not working right now
@@ -103,24 +110,20 @@ mqttClient.loop_start()
 # -------- globals ---------
 # mac address
 mac = get_mac()
-my_mac = hex(mac).upper()
+my_mac = hex(mac).upper()[2:]
 print("my mac is:" + my_mac)
-
-publishTopic = "/smartenv/respeaker/speech"
-subscribeTopic = "/smartenv/respeaker/lights"
 
 # -------- start leds --------
 pixel_ring.set_brightness(10)
 pixel_ring.change_pattern("smartenv")
 pixel_ring.wakeup()
 
-time.sleep(5)
+# time.sleep(5)
 
 # -------- start audio --------
 # speech recognition  
 r = sr.Recognizer()
 m = sr.Microphone()
-
 
 # -------- main program ---------
 try:
@@ -136,40 +139,43 @@ try:
     while True:
         # print("listening.", end=" ")
         
-        # listening
-        pixel_ring.listen()
-        # pixel_ring.set_color(r=255, g=0, b=0)
-        # time.sleep(0.1)
+        if bDoListen:
+            # listening
+            pixel_ring.listen()
+            # pixel_ring.set_color(r=255, g=0, b=0)
+            # time.sleep(0.1)
 
-        with m as source: audio = r.listen(source)
-        # print("recognizing.", end=" ")
+            with m as source: audio = r.listen(source)
+            # print("recognizing.", end=" ")
 
-        # thinking
-        pixel_ring.think()
-        # pixel_ring.set_color(r=255, g=0, b=128)
-        # time.sleep(0.1)
+            # thinking
+            pixel_ring.think()
+            # pixel_ring.set_color(r=255, g=0, b=128)
+            # time.sleep(0.1)
 
-        try:
-            # recognize speech using Google Speech Recognition
-            value = r.recognize_google(audio)
+            try:
+                # recognize speech using Google Speech Recognition
+                value = r.recognize_google(audio)
 
-            # we need some special handling here to correctly print unicode characters to standard output
-            if str is bytes:  # this version of Python uses bytes for strings (Python 2)
-                print(u"heard: {}".format(value).encode("utf-8"))
-            else:  # this version of Python uses unicode for strings (Python 3+)
-                print("heard: {}".format(value))
-                message = create_json(value)
-                
-                # publish to mqtt
-                ret = mqttClient.publish(publishTopic, message)
-                print("published to {}: {}".format(publishTopic, message))
-                pixel_ring.set_color(r=255, g=0, b=0)
-                time.sleep(0.1)
-                
-        except sr.UnknownValueError:
-            print("no results.")
-        except sr.RequestError as e:
-            print("Couldn't request results from Google Speech Recognition service; {0}".format(e))
+                # we need some special handling here to correctly print unicode characters to standard output
+                if str is bytes:  # this version of Python uses bytes for strings (Python 2)
+                    print(u"heard: {}".format(value).encode("utf-8"))
+                else:  # this version of Python uses unicode for strings (Python 3+)
+                    print("heard: {}".format(value))
+                    message = create_json(value)
+
+                    # publish to mqtt
+                    ret = mqttClient.publish(publishTopic, message)
+                    print("published to {}: {}".format(publishTopic, message))
+                    pixel_ring.set_color(r=255, g=0, b=0)
+                    time.sleep(0.1)
+
+            except sr.UnknownValueError:
+                print("no results.")
+            except sr.RequestError as e:
+                print("Couldn't request results from Google Speech Recognition service; {0}".format(e))
+        else:
+            time.sleep(0.1)
 except KeyboardInterrupt:
     print("exiting")
     pixel_ring.off()
