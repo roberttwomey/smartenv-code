@@ -1,3 +1,18 @@
+# Overview
+
+We have two e-Paper displays.
+
+# Usage
+
+## Display Text
+Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) ([code](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS)) to control the light ring.
+
+Subscribes to topic: `/smartenv/eink`
+
+Control messages:
+- `clear` - erases the screen
+
+
 # Setup
 from https://www.waveshare.com/wiki/6inch_HD_e-Paper_HAT
 
