@@ -1,3 +1,18 @@
+# Overview
+
+We have two e-Paper displays.
+
+# Usage
+
+## Display Text
+Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) ([code](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS)) to control the e-ink display. Either send a text to display, or send a control signal.
+
+Subscribes to topic: `/smartenv/eink`
+
+Control messages:
+- `clear` - erases the screen
+
+
 # Setup
 from https://www.waveshare.com/wiki/6inch_HD_e-Paper_HAT
 
