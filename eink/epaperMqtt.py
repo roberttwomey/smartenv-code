@@ -16,8 +16,10 @@ from PIL import Image,ImageDraw,ImageFont
 import traceback
 import textwrap
 
+
 # -------- mqtt stuff -------- #
 import paho.mqtt.client as mqtt
+import json
 
 topic = "smartenv/eink"
 clientName = "eink1"
@@ -31,22 +33,35 @@ def connectionStatus(client, userdata, flags, rc):
     mqttClient.subscribe(topic)
     print("subscribed")
 
+def is_json(myjson):
+    try:
+        json_object = json.loads(myjson)
+    except ValueError as e:
+        return False
+    return True
+
 def messageDecoder(client, userdata, msg):
     message = msg.payload.decode(encoding='UTF-8')
     
     # Feel free to remove the print, but confirmation in the terminal is nice.
     print("received: ", message)
 
+    text = ""
     # print("clear eink")
-    
-    logging.info("displaying payload message = ", message)
+    if is_json(message):
+        text = json.loads(message)[0]["text"]
+        # print(text)
+    else: 
+        text = message
+
+    logging.info("displaying payload message = ", text)
     Himage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
     draw = ImageDraw.Draw(Himage)
 
     margin = 10
     offset = 20
     draw.text((margin, 0), "received: ", font = font24, fill = 0)
-    for line in textwrap.wrap(message, width=28):
+    for line in textwrap.wrap(text, width=28):
         draw.text((margin, offset), line, font=font48, fill=0)
         offset += font48.getsize(line)[1]
 
