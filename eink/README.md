@@ -1,10 +1,13 @@
+Shortcuts:
+- [Usage](#usage)
+- [Setup as Service](#setup-as-service)
+- [Install](#install)
+
 # Overview
 
 <img src="https://user-images.githubusercontent.com/1598545/159357064-20d85d2e-73c4-4a31-8e3b-705abb57b1c5.png" width=600>
 
 Waveshare 5.83inch e-Paper V2. 648x480 pixels, black and white. ([link](https://www.waveshare.com/5.83inch-e-Paper.htm))
-
-
 
 
 # Usage
@@ -27,12 +30,7 @@ result:
 ~- `clear` - erases the screen~
 
 
-# Setup
-## eink setup for 5.83" display
-
-[TK]
-
-# eInk Service
+# Setup as Service
 
 __Hardware__
 
@@ -77,6 +75,12 @@ sudo systemctl start eink.service
 ```console
 sudo systemctl stop eink.service
 ```
+
+# Install
+## eink setup for 5.83" display
+
+[TK]
+
 
 # Leftovers
 
