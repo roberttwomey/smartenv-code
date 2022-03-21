@@ -7,11 +7,13 @@ We have two e-Paper displays.
 ## Display Text
 Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) ([code](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS)) to control the e-ink display. Either send a text to display, or send a control signal.
 
-Topic: `/smartenv/eink`
+topic: `/smartenv/eink`
 
-Contents: Type the text you want to send into the text box. For now, the text will be displayed as raw text.
+contents: Type the text you want to send into the text box. For now, the text will be displayed as raw text.
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/1598545/159355224-c5c44b6b-7bd8-4f49-b820-eb147826e720.png">
+
+result: 
 
 <kbd><img src="https://user-images.githubusercontent.com/1598545/159356401-4ce6f5f7-20c3-48b7-a156-64ba038e0577.png" width=400></kbd>
 
