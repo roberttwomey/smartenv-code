@@ -13,7 +13,7 @@ Subscribes to topic: `/smartenv/eink`
 
 Type the text you want to send into the text box. Any message will be displayed as raw text.
 
-![image](https://user-images.githubusercontent.com/1598545/159356401-4ce6f5f7-20c3-48b7-a156-64ba038e0577.png)
+<img src="https://user-images.githubusercontent.com/1598545/159356401-4ce6f5f7-20c3-48b7-a156-64ba038e0577.png" width=400>
 
 
 ~Control messages (NOT YET IMPLEMENTED):~
