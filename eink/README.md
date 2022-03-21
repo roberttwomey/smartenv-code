@@ -11,7 +11,7 @@ Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS)
 
 Subscribes to topic: `/smartenv/eink`
 
-Any message you send will be displayed as raw text.
+Type the text you want to send into the text box. Any message will be displayed as raw text.
 
 ~Control messages (NOT YET IMPLEMENTED):~
 ~- `clear` - erases the screen~
