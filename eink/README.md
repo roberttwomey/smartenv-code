@@ -13,8 +13,8 @@ Subscribes to topic: `/smartenv/eink`
 
 Any message you send will be displayed as raw text.
 
-~Control messages (NOT YET IMPLEMENTED):
-- `clear` - erases the screen~
+~Control messages (NOT YET IMPLEMENTED):~
+~- `clear` - erases the screen~
 
 
 # Setup
