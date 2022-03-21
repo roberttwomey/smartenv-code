@@ -71,6 +71,44 @@ Example adapted from [respeaker pixel_ring examples](https://github.com/respeake
 ## Wakeword Detection
 [Not yet implemented]
 
+# Setup a Service
+
+__Set Up Persistent Service__
+
+1. Create a service file like the following, _respeaker.service_:
+```
+[Unit]
+Description=Runs eink mqtt listener after boot
+After=multi-user.target
+
+[Service]
+Type=forking
+ExecStart=/home/pi/smartenv-code/respeaker/launch_respeaker.sh
+WorkingDirectory=/home/pi/smartenv-code/respeaker
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+```
+
+2. copy the service file to _/lib/systemd/_:
+
+```console
+sudo cp respeaker.service /lib/systemd/system
+```
+
+3. enable at boot
+
+```console
+sudo systemctl enable respeaker.service
+sudo systemctl start respeaker.service
+```
+
+4. stop
+```console
+sudo systemctl stop respeaker.service
+```
+
 # Software Install
 
 __Install Respeaker__
