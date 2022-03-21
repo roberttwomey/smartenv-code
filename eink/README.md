@@ -16,6 +16,12 @@ Control messages (NOT YET IMPLEMENTED):
 
 
 # Setup
+## eink setup for 5.83" display
+
+[TK]
+
+## eink setup for 8 inch display
+
 from https://www.waveshare.com/wiki/6inch_HD_e-Paper_HAT
 
 Open terminal of Raspberry Pi, and install bcm2835 libraries
@@ -42,3 +48,50 @@ sudo make clean
 sudo make -j4```
 
 Check the VCOM value on the FPC
+
+# eInk Service
+
+__Hardware__
+
+Raspberry Pi 3, preferrably with wired ethernet connection connected to HDTV in portrait mode (vertical orientation)
+
+__OS__
+
+Install recent [Raspbian Bullseye lite]
+
+__Set Up Persistent Service__
+
+1. Create a service file like the following, _eink.service_:
+```
+[Unit]
+Description=Runs eink mqtt listener after boot
+After=multi-user.target
+
+[Service]
+Type=forking
+ExecStart=/home/pi/smartenv-code/eink/launch_eink.sh
+WorkingDirectory=/home/pi/smartenv-code/eink
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+```
+
+2. copy the service file to _/lib/systemd/_:
+
+```console
+sudo cp eink.service /lib/systemd/system
+```
+
+3. enable at boot
+
+```console
+sudo systemctl enable eink.service
+sudo systemctl start eink.service
+```
+
+4. stop
+```console
+sudo systemctl stop eink.service
+```
+
