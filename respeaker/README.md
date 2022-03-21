@@ -1,3 +1,7 @@
+- [usage](#usage)
+- [setup as service](#setup-as-service)
+- [installation](#install)
+
 # Respeaker 6-Microphone Array
 <img src="https://user-images.githubusercontent.com/1598545/157468792-177624b7-5c33-4fd7-a845-4401881f29e2.png" width=600>
 
@@ -20,7 +24,7 @@ Capabilities:
 
 Note: While the system is running, you can publish the MQTT messages below to turn lights on and off, mute, listen, etc: [mqtt controls](#indicator-lights)
 
-# Capabilities
+# Usage
 
 ## Speech Recognition
 The best solution I have found is the [speechrecognition](https://pypi.org/project/SpeechRecognition/) package, which uses google speech services by default.
@@ -71,9 +75,7 @@ Example adapted from [respeaker pixel_ring examples](https://github.com/respeake
 ## Wakeword Detection
 [Not yet implemented]
 
-# Setup a Service
-
-__Set Up Persistent Service__
+# Setup as Service
 
 1. Create a service file like the following, _respeaker.service_:
 ```
@@ -109,7 +111,7 @@ sudo systemctl start respeaker.service
 sudo systemctl stop respeaker.service
 ```
 
-# Software Install
+# Install
 
 __Install Respeaker__
 (NOTE: this only runs on raspbian 32bit right now ca. March 2022)
