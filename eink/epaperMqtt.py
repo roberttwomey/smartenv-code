@@ -66,6 +66,8 @@ def messageDecoder(client, userdata, msg):
         offset += font48.getsize(line)[1]
 
     epd.display(epd.getbuffer(Himage))
+    Himage.save("image.jpg")
+
     # time.sleep(2)
     print("display message")
 
@@ -115,6 +117,7 @@ try:
     epd.display(epd.getbuffer(Himage))
     # time.sleep(2)
 
+    Himage.save("image.jpg")
 
     mqttClient.loop_forever()
 
