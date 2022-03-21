@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs eink mqtt listener after boot
+After=syslog.target network.target
+
+[Service]
+Type=forking
+ExecStart=/home/pi/smartenv-code/eink/launch_eink.sh
+
+[Install]
+WantedBy=multi-user.target
