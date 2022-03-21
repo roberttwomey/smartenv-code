@@ -11,8 +11,10 @@ Subscribes to topic: `/smartenv/eink`
 
 Any message you send will be displayed as raw text.
 
-Control messages (NOT YET IMPLEMENTED):
-- `clear` - erases the screen
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/1598545/159355224-c5c44b6b-7bd8-4f49-b820-eb147826e720.png">
+
+~Control messages (NOT YET IMPLEMENTED):
+- `clear` - erases the screen~
 
 
 # Setup
