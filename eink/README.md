@@ -25,9 +25,10 @@ result:
 
 <kbd><img src="https://user-images.githubusercontent.com/1598545/159356401-4ce6f5f7-20c3-48b7-a156-64ba038e0577.png" width=400></kbd>
 
+## Other controls
 
-~Control messages (NOT YET IMPLEMENTED):~
-~- `clear` - erases the screen~
+~NOT YET IMPLEMENTED)~
+~`clear` - erases the screen~
 
 
 # Setup as Service
