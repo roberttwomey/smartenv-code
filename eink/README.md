@@ -1,6 +1,11 @@
 # Overview
 
-We have two e-Paper displays.
+<img src="https://user-images.githubusercontent.com/1598545/159357064-20d85d2e-73c4-4a31-8e3b-705abb57b1c5.png" width=600>
+
+Waveshare 5.83inch e-Paper V2. 648x480 pixels, black and white. ([link](https://www.waveshare.com/5.83inch-e-Paper.htm))
+
+
+
 
 # Usage
 
