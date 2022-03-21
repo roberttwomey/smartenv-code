@@ -1,3 +1,4 @@
+Shortcuts:
 - [usage](#usage)
 - [setup as service](#setup-as-service)
 - [installation](#install)
