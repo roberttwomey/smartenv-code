@@ -3,7 +3,7 @@ Description=Runs eink mqtt listener after boot
 After=multi-user.target
 
 [Service]
-Type=idle
+Type=forking
 ExecStart=/home/pi/smartenv-code/eink/launch_eink.sh
 WorkingDirectory=/home/pi/smartenv-code/eink
 User=pi
