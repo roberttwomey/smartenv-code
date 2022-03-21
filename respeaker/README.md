@@ -1,3 +1,8 @@
+Shortcuts:
+- [usage](#usage)
+- [setup as service](#setup-as-service)
+- [installation](#install)
+
 # Respeaker 6-Microphone Array
 <img src="https://user-images.githubusercontent.com/1598545/157468792-177624b7-5c33-4fd7-a845-4401881f29e2.png" width=600>
 
@@ -20,7 +25,7 @@ Capabilities:
 
 Note: While the system is running, you can publish the MQTT messages below to turn lights on and off, mute, listen, etc: [mqtt controls](#indicator-lights)
 
-# Capabilities
+# Usage
 
 ## Speech Recognition
 The best solution I have found is the [speechrecognition](https://pypi.org/project/SpeechRecognition/) package, which uses google speech services by default.
@@ -71,7 +76,43 @@ Example adapted from [respeaker pixel_ring examples](https://github.com/respeake
 ## Wakeword Detection
 [Not yet implemented]
 
-# Software Install
+# Setup as Service
+
+1. Create a service file like the following, _respeaker.service_:
+```
+[Unit]
+Description=Runs eink mqtt listener after boot
+After=multi-user.target
+
+[Service]
+Type=forking
+ExecStart=/home/pi/smartenv-code/respeaker/launch_respeaker.sh
+WorkingDirectory=/home/pi/smartenv-code/respeaker
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+```
+
+2. copy the service file to _/lib/systemd/_:
+
+```console
+sudo cp respeaker.service /lib/systemd/system
+```
+
+3. enable at boot
+
+```console
+sudo systemctl enable respeaker.service
+sudo systemctl start respeaker.service
+```
+
+4. stop
+```console
+sudo systemctl stop respeaker.service
+```
+
+# Install
 
 __Install Respeaker__
 (NOTE: this only runs on raspbian 32bit right now ca. March 2022)

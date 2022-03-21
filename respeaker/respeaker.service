@@ -1,11 +1,12 @@
 [Unit]
-Description=respeaker
-After=network.target
+Description=Runs respeaker asr and light control
+After=multi-user.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi/smartenv-code/respeaker/respeaker_service.py
-Restart=always
+Type=forking
+ExecStart=/home/pi/smartenv-code/respeaker/launch_respeaker.sh
+WorkingDirectory=/home/pi/smartenv-code/respeaker
 User=pi
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target

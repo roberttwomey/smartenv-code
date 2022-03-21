@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # speechrecognition_mqtt.py
 #
 # listens for audio on a respeaker 6 mic array, and uses google speech recognition to retrieve text
@@ -21,9 +22,9 @@ import socket
 
 # myhostname = socket.gethostname()
 
-clientName = "smartenv2-pi"
-publishTopic = "/smartenv/respeaker2/speech"
-subscribeTopic = "/smartenv/respeaker2/lights"
+clientName = "smartenv4-pi"
+publishTopic = "/smartenv/respeaker4/speech"
+subscribeTopic = "/smartenv/respeaker4/lights"
 bDoListen = True
 
 # -------- mqtt helpers --------
