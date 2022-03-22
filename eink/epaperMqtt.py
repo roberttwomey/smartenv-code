@@ -56,7 +56,7 @@ def messageDecoder(client, userdata, msg):
 
     logging.info("displaying payload message = ", text)
     Himage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
-    draw = ImageDraw.Draw(Himage)
+    # draw = ImageDraw.Draw(Himage)
 
     margin = 10
     offset = 20
@@ -106,6 +106,7 @@ try:
     draw.text((10, 20), '5.83inch e-Paper', font = font24, fill = 0)
     draw.text((150, 0), u'微雪电子', font = font24, fill = 0)    
     draw.text((0, 100), 'smartenv.roberttwomey.com', font = font48, fill = 0)
+    draw.text((0, 100), topic, font = font48, fill = 0)
     draw.line((20, 50, 70, 100), fill = 0)
     draw.line((70, 50, 20, 100), fill = 0)
     draw.rectangle((20, 50, 70, 100), outline = 0)
