@@ -60,7 +60,7 @@ def messageDecoder(client, userdata, msg):
 
     margin = 10
     offset = 20
-    draw.text((margin, 0), "received: ", font = font24, fill = 0)
+    #draw.text((margin, 0), "received: ", font = font24, fill = 0)
     for line in textwrap.wrap(text, width=28):
         draw.text((margin, offset), line, font=font48, fill=0)
         offset += font48.getsize(line)[1]
