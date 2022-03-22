@@ -117,3 +117,7 @@ sudo make clean
 sudo make -j4```
 
 Check the VCOM value on the FPC
+
+# Artworks
+- Tim Schwartz [Escapism](https://www.timschwartz.org/escapism/), [eScape 50](https://www.timschwartz.org/escape-50/)
+x]]]
