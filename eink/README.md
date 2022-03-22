@@ -25,6 +25,10 @@ result:
 
 <kbd><img src="https://user-images.githubusercontent.com/1598545/159356401-4ce6f5f7-20c3-48b7-a156-64ba038e0577.png" width=400></kbd>
 
+## Display Image
+
+Create an image (or series of images) that is 648 pixels wide by 480 pixels tall, black and white. (.jpg or .png) 
+
 ## Other controls
 
 ~NOT YET IMPLEMENTED)~
