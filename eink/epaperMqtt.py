@@ -56,7 +56,7 @@ def messageDecoder(client, userdata, msg):
 
     logging.info("displaying payload message = ", text)
     Himage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
-    # draw = ImageDraw.Draw(Himage)
+    draw = ImageDraw.Draw(Himage)
 
     margin = 10
     offset = 20
