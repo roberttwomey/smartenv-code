@@ -28,6 +28,7 @@ mqttClient = mqtt.Client(clientName)
 user = "public"
 password = "public"
 
+
 def connectionStatus(client, userdata, flags, rc):
     print("subscribing to {}...".format(topic), end="")
     mqttClient.subscribe(topic)
@@ -48,13 +49,16 @@ def messageDecoder(client, userdata, msg):
 
     text = ""
     # print("clear eink")
-    if is_json(message):
-        text = json.loads(message)[0]["image"]
-        # print(text)
-    else: 
-        text = message
+    # if is_json(message):
+    #     text = json.loads(message)[0]["image"]
+    #     # print(text)
+    # else: 
+    #     text = message
+    # text = message
 
-    logging.info("displaying payload message = ", text)
+    filename = "./images/"+message
+    print("opening image "+filename)
+    logging.info("displaying payload message = ", filename)
 
     # load image from message filename
     # Himage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
@@ -67,9 +71,15 @@ def messageDecoder(client, userdata, msg):
     #     draw.text((margin, offset), line, font=font48, fill=0)
     #     offset += font48.getsize(line)[1]
 
-    Himage = Image.open(text)
+    # himage = Image.new('1', (epd.width, epd.height), 255)
+
+    Himage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
+    jpg = Image.open(filename)
+    Himage.paste(jpg, (0, 0))
+
+    time.sleep(1)
     epd.display(epd.getbuffer(Himage))
-    Himage.save("image.jpg")
+    # Himage.save("image.jpg")
 
     # time.sleep(2)
     print("display message")
@@ -118,6 +128,7 @@ try:
     draw.arc((140, 50, 190, 100), 0, 360, fill = 0)
     draw.rectangle((80, 50, 130, 100), fill = 0)
     draw.chord((200, 50, 250, 100), 0, 360, fill = 0)
+
     epd.display(epd.getbuffer(Himage))
     # time.sleep(2)
 

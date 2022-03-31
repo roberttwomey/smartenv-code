@@ -21,8 +21,8 @@ import textwrap
 import paho.mqtt.client as mqtt
 import json
 
-topic = "smartenv/eink"
-clientName = "eink1"
+topic = "smartenv/eink2"
+clientName = "eink2"
 serverAddress = "public.cloud.shiftr.io" # problems connecting? try <your server name>.local
 mqttClient = mqtt.Client(clientName)
 user = "public"
