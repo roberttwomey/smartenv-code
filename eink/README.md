@@ -51,6 +51,7 @@ python epaperMqtt_image.py
 ~NOT YET IMPLEMENTED)~
 ~`clear` - erases the screen~
 
+## 
 
 # Setup as Service
 
