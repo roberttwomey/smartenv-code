@@ -29,6 +29,23 @@ result:
 
 Create an image (or series of images) that is 648 pixels wide by 480 pixels tall, black and white. (.jpg or .png) 
 
+Use the p5 [mqttPublisher](https://editor.p5js.org/robert.twomey/full/CEXVmsCBS) ([code](https://editor.p5js.org/robert.twomey/sketches/CEXVmsCBS)) to tell it a filename to load.
+
+topic: `/smartenv/eink2/image`
+
+contents: name of the file you want to load `anniew01.jpg`
+<img width="640" alt="image" src="https://user-images.githubusercontent.com/1598545/161072876-05e53ec0-be5c-4e05-a7c0-d11250c5baab.png">
+
+
+### setup: 
+
+```
+cd smartenv-code/eink 
+sudo systemctl stop eink
+python epaperMqtt_image.py
+```
+
+
 ## Other controls
 
 ~NOT YET IMPLEMENTED)~
