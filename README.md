@@ -10,10 +10,11 @@ Hardware:
 - [IoT Gateway](#iot-gateway) relaying BLE and other sensor signals
 - [Particle Photon](/particle) wireless IoT board to do sensors and actuators over wifi
 - [Respeaker](/respeaker) circular and linear mic arrays (4-6 mics). can also *play* audio with an attached speaker.
-- [Raspberry Pi](#raspberry-pi) media playback controlled by MQTT
+- [e-Ink](/eink) electronic ink displays as "quiet" outputs.
+- [NFC tags](/nfc) Near Field Communication as passive sensor readings.
+- [Raspberry Pi](#raspberry-pi) media playback controlled by MQTT.
 - [Coral Board](#google-coral-board) edge inference (mobilenet, yolo, face detection, etc.)
-- [e-Ink](/eink) electronic ink displays as "quiet" outputs
-- [Robots](/xarm) xArm7 co-robotic arm for posing and replaying action
+- [Robots](/xarm) xArm7 co-robotic arm for posing and replaying action.
 
 [MQTT](https://mqtt.org/) Platforms:
 - We are exploring [shiftr.io](https://www.shiftr.io/try/) as our mqtt broker. We can use the eclipse mqtt server instead. You can view a live visualization of their public broker here: https://www.shiftr.io/try/. 
